@@ -1,0 +1,42 @@
+写真の配置先：assets/spots/
+すべてJPEG形式（拡張子 .jpg、小文字）
+未配置の場合は既存の代替表示になります。
+
+togetsukyo.jpg	渡月橋
+tenryuji.jpg	天龍寺
+bamboo-grove.jpg	竹林の小径
+nonomiya.jpg	野宮神社
+jojakkoji.jpg	常寂光寺
+matsugae.jpg	とうふと湯葉 松ヶ枝
+eikando.jpg	永観堂
+nanzenji.jpg	南禅寺
+ninenzaka.jpg	二寧坂
+sannenzaka.jpg	産寧坂
+kiyomizu.jpg	清水寺
+iroha.jpg	いろはかるた 木屋町本店
+marun.jpg	嵐山まるん
+kyo-baum.jpg	京ばあむ 嵐山店
+ochanoko.jpg	おちゃのこさいさい 嵐山店
+malebranche.jpg	マールブランシュ 嵐山店
+otabe.jpg	おたべ 嵐山店
+nishiri.jpg	京つけもの西利 嵐山 昇龍苑店
+snoopy.jpg	SNOOPY茶屋 京都嵐山店
+kazurano.jpg	嵐山かづら野
+square.jpg	嵐山駅 はんなり・ほっこりスクエア
+kasagi.jpg	かさぎ屋
+ito.jpg	伊藤久右衛門 清水産寧坂店
+fujinami.jpg	京だんご 藤菜美 高台寺店
+ishidatami.jpg	石畳
+shichimi.jpg	七味家本舗
+ousu.jpg	おうすの里 産寧坂店
+sannei-marun.jpg	産寧坂まるん
+shoyeido.jpg	松栄堂 産寧坂店
+seiryuen.jpg	青龍苑
+ogura.jpg	小倉池・御髪神社
+kameyama.jpg	嵐山公園 亀山地区
+nejiri.jpg	ねじりまんぽ
+kodaiji.jpg	高台寺
+
+【スケジュール専用】
+hankyu-umeda.jpg	阪急大阪梅田駅集合
+togetsukyo.jpg	嵐山自由散策（渡月橋と共用）
