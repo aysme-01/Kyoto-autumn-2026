@@ -1,0 +1,309 @@
+/* Autumn in Kyoto — unified UI palette and mobile shell */
+:root {
+  --kyoto-wine: #8B3445;
+  --kyoto-wine-dark: #702333;
+  --kyoto-paper: #faf5e9;
+  --kyoto-line: #d9cbb7;
+  --kyoto-ink: #493e36;
+  --kyoto-muted: #746b61;
+  --kyoto-olive: #65754a;
+}
+html, body { margin: 0; height: 100%; overscroll-behavior: none; background-color: var(--kyoto-wine); }
+body { display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden; }
+.site-header { flex: 0 0 auto; position: relative; z-index: 1030; background: var(--kyoto-wine); padding-top: env(safe-area-inset-top, 0px); }
+.site-header > .container { min-height: 52px; padding: 6px 14px; }
+#app-content { flex: 1 1 auto; min-height: 0; min-width: 0; width: 100%; overflow-y: auto; overflow-x: hidden; overscroll-behavior: none; -webkit-overflow-scrolling: touch; background-color: #fffaf2; background-image: linear-gradient(#ffffffa6,#ffffffa6),url('../assets/patterns/washi02.png'); background-size: auto,600px auto; }
+.home-hero { margin-top: 0; background: var(--kyoto-wine); }
+.site-footer { position: relative; flex: 0 0 auto; bottom: auto; z-index: 1020; width: 100%; background-color: var(--kyoto-wine); background-image: none; padding: 6px 0 calc(7px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid #ffffff30; }
+.footer-link { gap: 3px; font-size: 11px; min-height: 47px; }
+.footer-icon { width: 32px; height: 32px; font-size: 23px; }
+.footer-link.active .footer-icon { background: #faf1e3; color: var(--kyoto-wine); box-shadow: 0 0 0 1px #d7ba80; }
+.reservation-btn.cta, .reservation-btn.cta:hover { gap: 7px; padding: 7px 12px; min-height: 34px; border: 1px solid #fff4ecbb; border-radius: 20px; background: transparent; color: #fff4ec; white-space: nowrap; }
+.reservation-btn.cta::before { display: none; }
+.reservation-btn.cta span, .reservation-arrow-down { color: #fff4ec; font-size: 12px; }
+.reservation-arrow-down { margin-left: 1px; }
+.reservation-btn.cta:focus-visible { outline-color: #fff4ec; }
+/* Schedule: wine for destinations; subdued green exclusively for travel. */
+.schedule-item:not(.is-transport) :is(.schedule-time,.schedule-title,.schedule-duration,.schedule-spot-name,.schedule-spot-icon,.tag-hours,.tag-fee,.tag-reservation,.tag-reservation-main) { color: var(--kyoto-wine); }
+.schedule-item:not(.is-transport) .schedule-card::before { background: #d8c7ac65; }
+.schedule-item:not(.is-transport) .schedule-photo-placeholder { background: #eee4d2; color: var(--kyoto-wine); }
+.schedule-item:not(.is-transport) .schedule-marker::before,.schedule-item:not(.is-transport) .schedule-marker::after { background-color: var(--kyoto-wine); }
+.schedule-item:not(.is-transport).is-upcoming .schedule-marker::before,.schedule-item:not(.is-transport).is-current .schedule-marker::before { background: none; border-color: #c1aab0; }
+.schedule-item:not(.is-transport):is(.is-current,.is-completed) .schedule-dot { background: var(--kyoto-wine); }
+.schedule-item.is-transport :is(.schedule-time,.schedule-title,.schedule-duration) { color: var(--kyoto-olive); }
+.schedule-item.is-transport .schedule-end,.schedule-item.is-transport .schedule-description { color: var(--kyoto-muted); }
+.schedule-spot-name-row,.spot-detail-name-row { display: flex; align-items: center; gap: 8px; }
+.schedule-spot-name-row .schedule-spot-name,.spot-detail-name-row .spot-detail-name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.schedule-spot-map,.schedule-spot-menu,.spot-name-map { color: var(--kyoto-wine); border: 1px solid #b78e91; border-radius: 20px; padding: 5px 9px; white-space: nowrap; flex-shrink: 0; }
+.schedule-note { border: 0; border-top: 1px solid #d8cbb5; background: transparent; color: var(--kyoto-muted); margin-top: 9px; padding: 9px 0 2px; gap: 6px; font-size: 11px; line-height: 1.65; }
+.schedule-note > i { color: var(--kyoto-wine); }
+.schedule-route-type-row { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; margin-bottom: 5px; }
+.schedule-route-type-row .schedule-route-type { font-size: 12px; color: var(--kyoto-olive); font-weight: 600; margin: 0; letter-spacing: 0; }
+.schedule-route-type-row .schedule-route-tag { color: var(--kyoto-muted); font-size: 11px; padding: 0; }
+.route-inline-map { margin-left: auto; border-radius: 20px; padding: 4px 9px; white-space: nowrap; }
+.schedule-route-time { color: var(--kyoto-olive); }
+.schedule-route-note,.rail-note { color: var(--kyoto-muted); }
+/* Rail retains its station/leg structure; use the same travel palette. */
+.rail-journey { color: var(--kyoto-ink); }
+.rail-station { background: #ebece5; color: var(--kyoto-ink); border-radius: 5px; }
+.rail-station-name,.rail-line-name { color: var(--kyoto-olive); }
+.rail-leg { border-left-color: var(--kyoto-olive); }
+.rail-leg.rail-other { border-left-color: #a6a69b; }
+.rail-stats,.rail-meta,.rail-transfer,.rail-station-times small { color: var(--kyoto-muted); }
+.rail-leg .schedule-route-timetable,.schedule-route-link { border-radius: 20px; }
+/* Modal: one responsive centered shell, natural height capped at 80dvh. */
+.modal { --bs-modal-margin: 0px; overscroll-behavior: contain; }
+.modal .modal-dialog.modal-dialog-centered.modal-dialog-scrollable { width: 88%; max-width: 560px; height: auto; min-height: calc(100% - 24px); margin: 12px auto; }
+.modal .modal-dialog.modal-dialog-centered .modal-content { width: 100%; height: auto; max-height: 80vh; max-height: 80dvh; border: 1px solid var(--kyoto-line); border-radius: 16px; background: var(--kyoto-paper); color: var(--kyoto-ink); overflow: hidden; box-shadow: 0 12px 36px #26151438; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-header { background: var(--kyoto-wine); color: #fff8ef; padding: 12px 15px; border: none; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-title { color: #fff8ef; font-family: 'Shippori',serif; font-size: 16px; font-weight: 700; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .btn-close { filter: invert(1) grayscale(100%) brightness(200%); opacity: .9; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-body { padding: 14px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-footer { justify-content: center; padding: 7px 14px; background: var(--kyoto-paper); border-top: 1px solid var(--kyoto-line); }
+.trip-modal-close,.schedule-detail-close { background: transparent; border: 0; color: var(--kyoto-wine); width: 100%; padding: 7px 12px; font-weight: 700; font-size: 14px; }
+.schedule-detail-summary { border-left-color: var(--kyoto-wine); margin-bottom: 10px; padding: 10px; }
+.schedule-detail-heading h3 { font-family: 'Shippori',serif; font-size: 18px; }
+.schedule-detail-time,.schedule-detail-modal :is(.tag-hours,.tag-fee) { color: var(--kyoto-wine); }
+#spot-detail-modal :is(.spot-detail-link,.spot-detail-tag,.spot-menu-price,.spot-detail-admission,.spot-detail-access-value) { color: var(--kyoto-wine); }
+#spot-detail-modal .spot-detail-link { border-color: #b78e91; }
+#spot-detail-modal .spot-detail-tag { background: #eee4d2; }
+#spot-detail-modal .spot-detail-section { margin-top: 16px; padding-top: 10px; }
+#spot-detail-modal .spot-detail-section-title { font-size: 16px; padding-bottom: 6px; margin-bottom: 8px; }
+#spot-detail-modal .spot-detail-data-item { padding: 7px 0; }
+#spot-detail-modal .spot-detail-data-row { gap: 8px; }
+#spot-detail-modal .spot-menu-info { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 8px; }
+#spot-detail-modal .spot-menu-description { grid-column: 1 / -1; margin-top: 2px; }
+#spot-detail-modal .spot-menu-price { white-space: nowrap; margin-top: 0; }
+#spot-detail-modal .spot-detail-reservation { padding: 12px; }
+#timetable-modal :is(.timetable-line,.timetable-route,.timetable-departure,.timetable-arrival,.timetable-link) { color: var(--kyoto-wine); }
+#timetable-modal .timetable-link { border-color: #b78e91; }
+#timetable-modal .timetable-row.is-next { background: #eee4d2; color: var(--kyoto-wine); }
+#timetable-modal .tag-next { background: var(--kyoto-wine); color: #fff8ef; }
+.spots-filter button,.spots-filter-btn { color: var(--kyoto-wine); }
+@media (max-width: 390px) { .schedule-spot-name-row { gap: 5px; } .schedule-spot-map { padding: 4px 6px; } .flow-label { font-size: 9px; } }
+/* Remaining non-transport accents and modal text. */
+#spot-detail-modal .spot-detail-data-label,#spot-detail-modal .spot-detail-placeholder,#spot-detail-modal .spot-detail-photo-inner { color: var(--kyoto-wine); }
+#spot-detail-modal .spot-detail-photo-inner { background: #eee4d2; }
+#timetable-modal .timetable-table th,#timetable-modal .timetable-service { color: var(--kyoto-muted); }
+#timetable-modal .timetable-row.is-past :is(.timetable-departure,.timetable-arrival,.timetable-service) { color: #a49b90; }
+#schedule-detail-modal .schedule-spot-map,#schedule-detail-modal .schedule-spot-menu { color: var(--kyoto-wine); border-color: #b78e91; }
+.schedule-route-item .schedule-route-note { font-size: 11px; }
+.spots-filters button { border-color: #b78e91; color: var(--kyoto-wine); }
+.spots-filters button[aria-pressed="true"] { background: var(--kyoto-wine); color: #fff8ed; }
+body { background-image: none; }
+
+/* Compact, editorial spot detail — keep the existing Kyoto wine/paper palette. */
+#spot-detail-modal .modal-body { padding: 18px 15px 12px; }
+#spot-detail-modal .modal-content { background: var(--kyoto-paper); }
+#spot-detail-modal .spot-detail { color: var(--kyoto-ink); font-size: 13px; line-height: 1.65; }
+#spot-detail-modal .spot-detail-photo { width: 96%; margin: 5px auto 17px; padding: 6px; background: #fffdf7; transform: rotate(-1deg); }
+#spot-detail-modal .spot-detail-photo::after { left: 7%; width: 26%; height: 14px; background: #d9c3a280; }
+#spot-detail-modal .spot-detail-photo-inner { aspect-ratio: 16/10; }
+#spot-detail-modal .spot-detail-title-line { display: flex; align-items: center; gap: 7px; }
+#spot-detail-modal .spot-detail-type-icon { color: var(--kyoto-wine); font-size: 19px; flex-shrink: 0; }
+#spot-detail-modal .spot-detail-name { flex: 1; min-width: 0; margin: 0; line-height: 1.35; font-size: clamp(18px,5.8vw,24px); color: var(--kyoto-ink); font-family: 'Shippori',serif; overflow-wrap: anywhere; }
+#spot-detail-modal .spot-detail-link.spot-name-map { width: 38px; height: 38px; padding: 0; flex: 0 0 38px; border-color: var(--kyoto-line); border-radius: 50%; font-size: 18px; }
+#spot-detail-modal .spot-detail-reading { margin: 1px 0 3px 26px; color: var(--kyoto-muted); font-size: 11px; }
+#spot-detail-modal .spot-detail-tags { gap: 5px; margin: 6px 0 8px; }
+#spot-detail-modal .spot-detail-tag { border: 1px solid var(--kyoto-line); border-radius: 20px; padding: 1px 8px; color: var(--kyoto-wine); background: transparent; font-size: 10px; }
+#spot-detail-modal .spot-detail-description { margin: 7px 0 11px; line-height: 1.7; }
+#spot-detail-modal .spot-facts { margin: 12px 0 0; border-top: 1px solid var(--kyoto-line); }
+#spot-detail-modal .spot-fact-row { display: grid; grid-template-columns: minmax(90px, 38%) minmax(0, 1fr); gap: 8px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--kyoto-line); }
+#spot-detail-modal .spot-fact-row dt { display: flex; align-items: baseline; gap: 7px; margin: 0; font-size: 12px; font-weight: 500; }
+#spot-detail-modal .spot-fact-row dt i { width: 16px; text-align: center; color: var(--kyoto-wine); font-size: 15px; flex: 0 0 16px; }
+#spot-detail-modal .spot-fact-row dd { margin: 0; color: var(--kyoto-ink); font-size: 12px; line-height: 1.55; overflow-wrap: anywhere; }
+#spot-detail-modal .spot-fact-row dd small { display: block; font-size: 11px; color: var(--kyoto-muted); margin-top: 2px; }
+#spot-detail-modal .spot-fact-qualifier { color: var(--kyoto-muted); font-size: 11px; }
+#spot-detail-modal .spot-detail-section { margin-top: 14px; padding-top: 0; border-top: 0; }
+#spot-detail-modal .spot-detail-section-title { margin: 0 0 5px; padding: 0; font-size: 15px; border: 0; color: var(--kyoto-wine); }
+#spot-detail-modal .spot-highlight-item { position: relative; padding: 3px 0 3px 13px; border: 0; }
+#spot-detail-modal .spot-highlight-item::before { content: ''; position: absolute; left: 1px; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: var(--kyoto-wine); }
+#spot-detail-modal .spot-highlight-title { color: var(--kyoto-ink); font-size: 13px; font-weight: 500; }
+#spot-detail-modal .spot-highlight-description { font-size: 12px; color: var(--kyoto-muted); }
+#spot-detail-modal .spot-detail-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin: 16px 0 0; gap: 7px; }
+#spot-detail-modal .spot-detail-actions .spot-detail-link { min-height: 42px; padding: 6px; border-radius: 9px; border-color: var(--kyoto-wine); font-size: 12px; font-weight: 600; }
+#spot-detail-modal .spot-detail-actions .spot-map-action { background: var(--kyoto-wine); color: #fffaf2; }
+#spot-detail-modal .spot-detail-actions .spot-detail-link:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* Final editorial refinements — compact home, consistent Japanese typography. */
+:root { --kyoto-font: "Shippori", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+body, button, input, select, textarea, .modal { font-family: var(--kyoto-font); }
+.header-date, .footer-link, .reservation-btn, .modal-title { font-family: var(--kyoto-font); }
+.home-hero { padding: 0 0 3px; }
+.home-hero-image { width: 100%; height: auto; max-height: min(57vw, 225px); object-fit: contain; }
+.weather-circle-area { width: clamp(78px, 22vw, 102px); bottom: 5px; right: 7px; }
+.weather-circle { gap: 1px; padding: 5px; }
+.weather-circle__label { font-size: 9px; }
+.weather-circle__value { font-size: 11px; }
+.weather-circle__value i { font-size: 11px; }
+.weather-circle__divider { margin: 2px 0; }
+.trip-progress { padding: 16px 12px 0; }
+.location-card-now { padding: 9px 10px 8px; }
+.home-now-heading { margin-bottom: 3px; }
+.location-card-now .location-card-label { margin-top: -12px; padding: 3px 11px; font-size: 12px; }
+.home-now-main { min-height: 60px; gap: 7px; margin-bottom: 5px; }
+.home-now-icon { flex-basis: 27px; font-size: 18px; min-height: 30px; }
+.home-now-photo { flex-basis: 23%; max-width: 88px; padding: 3px 3px 6px; }
+.home-now-photo::before { height: 9px; }
+#home-current { font-size: clamp(15px, 4.25vw, 20px); line-height: 1.35; }
+#home-current-description { font-size: 11px; margin-top: 2px; }
+.home-category { font-size: 10px; padding: 1px 6px; margin-bottom: 2px; }
+.home-now-info { padding: 5px 0; gap: 3px 6px; font-variant-numeric: tabular-nums; }
+.home-now-note { padding: 5px 0 1px; gap: 5px; font-size: 11px; color: var(--kyoto-muted); }
+.home-controls { margin-top: 5px; gap: 5px; }
+.home-controls button { min-height: 30px; }
+.home-next-row { gap: 12px; margin-top: 10px; }
+.location-card-next { padding: 6px 10px; }
+.location-card-next .location-card-label { margin-bottom: 1px; }
+#home-next { font-size: clamp(13px, 3.65vw, 17px); }
+.home-next-info { margin-top: 2px; font-size: 11px; }
+.home-quick-button { min-height: 32px; }
+.today-flow { margin: 12px 0 0; padding: 4px 0 0; }
+.today-route { display: block; height: auto; width: 100%; max-height: 61px; overflow: visible; }
+.route-path { stroke: #b4b29c; stroke-width: 2; stroke-dasharray: 3 5; stroke-linecap: round; fill: none; }
+.today-route .route-stop { color: #b9bea6; }
+.today-route .route-stop.is-completed { color: #65754a; }
+.today-route .route-stop.is-current { color: #8B3445; }
+.today-route text { font-family: var(--kyoto-font); font-size: 10.6px; fill: #746b61; }
+.today-route .is-current text { fill: #8B3445; font-weight: 700; }
+.home-notes-section { margin-top: 12px; }
+.editorial-note, #spot-detail-modal .spot-detail-note, #schedule-detail-modal .schedule-note {
+  display: flex; align-items: baseline; gap: 7px; padding: 7px 0 0; margin: 10px 0 2px;
+  border: 0; background: transparent; color: var(--kyoto-muted); font-size: 12px; line-height: 1.7;
+  font-family: var(--kyoto-font); font-weight: 400; white-space: pre-line;
+}
+.editorial-note > i { flex: 0 0 auto; color: var(--kyoto-wine); font-size: 12px; }
+.editorial-note > span, .editorial-note > div { min-width: 0; overflow-wrap: anywhere; }
+#spot-detail-modal .spot-photo-credit { margin: 3px 1px 0; color: var(--kyoto-muted); font-size: 9px; line-height: 1.5; text-align: right; }
+.spot-photo-credit a { color: inherit; text-decoration: underline; }
+#spot-detail-modal .spot-detail-section-title, #spot-detail-modal .spot-detail-name,
+.schedule-detail-heading h3, .schedule-spot-name { font-family: var(--kyoto-font); }
+@media (max-height: 780px) and (max-width: 600px) {
+  .home-hero-image { max-height: min(48vw, 185px); }
+  .trip-progress { padding-top: 13px; }
+  .home-next-row { margin-top: 8px; }
+  .today-flow { margin-top: 8px; }
+}
+@media (min-width: 700px) { .home-hero-image { max-height: 390px; object-fit: contain; } }
+
+/* Keep the collection filters visible while the main content scrolls. */
+.spots-page .spots-filters {
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  margin: -4px -20px 16px;
+  padding: 8px 20px 13px;
+  background-color: #fffaf2;
+  background-image: linear-gradient(#ffffffa6,#ffffffa6),url('../assets/patterns/washi02.png');
+  background-size: auto,600px auto;
+  box-shadow: 0 5px 8px -7px #493e3655;
+}
+
+/* A slightly taller, full-width hero; keep the existing artwork and overlays. */
+@media (max-width: 699px) {
+  .home-hero-image {
+    width: 100%;
+    height: 61vw;
+    max-height: none;
+    object-fit: fill;
+  }
+}
+
+/* Reservation control and directly accessible spot details. */
+.site-header .reservation-btn.cta {
+  gap: 7px; padding: 7px 13px; min-height: 38px; border: 1px solid #faf1e3;
+  border-radius: 999px; background: #faf1e3; color: var(--kyoto-wine);
+  box-shadow: 0 1px 3px #4e152b33; line-height: 1.2;
+}
+.site-header .reservation-btn.cta span { color: var(--kyoto-wine); font-size: 14px; font-weight: 700; letter-spacing: .035em; }
+.site-header .reservation-btn.cta > i { color: var(--kyoto-wine); font-size: 16px; }
+.site-header .reservation-btn.cta .reservation-arrow-down { font-size: 11px; margin-left: 1px; }
+.site-header .reservation-btn.cta:is(:hover,[aria-expanded="true"]) { background: #f1e3cd; border-color: #f1e3cd; }
+.reservation-dropdown { padding: 5px 12px; background: var(--kyoto-paper); border-color: var(--kyoto-line); }
+.reservation-link { width: 100%; border: 0; background: transparent; text-align: left; padding: 12px 4px; cursor: pointer; border-radius: 0; }
+.reservation-link .reservation-info > span { display: block; }
+.reservation-link .reservation-name { font-size: 16px; line-height: 1.4; }
+.reservation-link .reservation-facility { font-size: 11px; color: var(--kyoto-muted); margin-top: 2px; }
+.reservation-link .reservation-date { font-size: 13px; font-weight: 700; color: var(--kyoto-wine); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.reservation-link .reservation-icon { background: #eee4d2; color: var(--kyoto-wine); }
+.reservation-link:is(:hover,:focus-visible) { background: #f0e7d7; }
+.reservation-link:focus-visible { outline: 2px solid var(--kyoto-wine); outline-offset: -2px; }
+.reservation-link:disabled { cursor: default; }
+
+/* Compact reservation panel and modal sizing */
+#header-reservations .reservation-btn.cta[aria-expanded="true"] {
+  background: #fffaf2; border-color: #fffaf2; color: var(--kyoto-wine);
+  box-shadow: 0 0 0 2px #fffaf244;
+}
+#header-reservations .reservation-btn.cta[aria-expanded="true"] :is(span,i) { color: var(--kyoto-wine); }
+#reservation-list.reservation-dropdown {
+  width: min(330px, calc(100vw - 28px)); max-width: calc(100vw - 28px);
+  padding: 10px 12px; border: 1px solid var(--kyoto-line); border-radius: 14px;
+  background: #fffcf5; color: var(--kyoto-ink); box-shadow: 0 8px 28px #28101938;
+  max-height: min(65vh, 440px); max-height: min(65dvh, 440px); overflow-y: auto;
+  white-space: normal;
+}
+.reservation-list-heading { display:flex; align-items:center; justify-content:space-between; padding: 2px 4px 9px; border-bottom: 1px solid var(--kyoto-line); color: var(--kyoto-wine); font-size: 15px; font-weight: 700; }
+.reservation-count { color: var(--kyoto-muted); font-size: 12px; font-weight: 500; }
+#reservation-list .reservation-link { display:grid; grid-template-columns: 76px minmax(0,1fr) 12px; align-items:center; gap:10px; min-height: 76px; padding: 11px 4px; color:var(--kyoto-ink); }
+#reservation-list .reservation-time-block { display:flex; flex-direction:column; gap:2px; padding-right:8px; border-right:1px solid var(--kyoto-line); color:var(--kyoto-wine); }
+#reservation-list .reservation-day { font-size: 11px; line-height: 1.4; color:var(--kyoto-muted); }
+#reservation-list .reservation-time { font-size: 21px; line-height: 1.25; font-weight:700; font-variant-numeric:tabular-nums; }
+#reservation-list .reservation-name { font-size:15px; line-height:1.5; color:var(--kyoto-wine); overflow-wrap:anywhere; }
+#reservation-list .reservation-facility { color:var(--kyoto-ink); font-size:12px; margin-top:2px; }
+#reservation-list .reservation-status { color:var(--kyoto-muted); font-size:11px; margin-top:2px; line-height:1.4; }
+#reservation-list .reservation-arrow { font-size:12px; color:var(--kyoto-wine); }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-dialog.modal-dialog-centered.modal-dialog-scrollable {
+  width: 84%; max-width: 520px; height: auto; min-height: calc(100% - 24px); margin: 12px auto;
+}
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-dialog.modal-dialog-centered .modal-content {
+  max-height: 72vh; max-height: 72dvh; border-radius: 16px;
+}
+
+/* 2026-11-25: explicit mobile fixes; keep old common rules from leaking through. */
+.site-header > .container { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.site-header .header-date { color:#fff8ef; white-space:nowrap; min-width:0; flex:0 1 auto; }
+#header-reservations { flex:0 0 auto; margin-left:auto; }
+#header-reservations .reservation-btn.cta {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  width:auto; min-width:104px; min-height:38px; padding:7px 12px;
+  color:#8B3445; background:#faf1e3; border:1px solid #faf1e3;
+  border-radius:999px; white-space:nowrap; overflow:visible;
+}
+#header-reservations .reservation-btn.cta::before,
+#header-reservations .reservation-btn.cta::after { content:none; display:none; }
+#header-reservations .reservation-btn.cta span { color:#8B3445; font-size:13px; font-weight:700; line-height:1.4; }
+#header-reservations .reservation-btn.cta i { color:#8B3445; }
+#header-reservations .reservation-btn.cta:focus-visible { outline:2px solid #fff8ef; }
+@media (max-width:699px) {
+  .home-hero .home-hero-image { display:block; width:100%; height:auto; max-height:none; object-fit:contain; }
+}
+/* Center on the visible viewport, not the potentially taller document. */
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal).modal {
+  position:fixed; inset:0; width:100%; height:100vh; height:100dvh;
+  overflow:hidden; box-sizing:border-box;
+  padding: max(12px, env(safe-area-inset-top)) 0 max(12px, env(safe-area-inset-bottom)) !important;
+}
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal).modal.show {
+  display:flex !important; align-items:center; justify-content:center;
+}
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-dialog.modal-dialog-centered.modal-dialog-scrollable {
+  display:flex; align-items:center; width:84%; max-width:520px; min-height:0; height:auto; max-height:100%; margin:0 auto;
+}
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-dialog.modal-dialog-centered .modal-content {
+  display:flex; flex-direction:column; width:100%; min-height:0; height:auto;
+  max-height:72vh; max-height:min(72dvh, calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 32px));
+  overflow:hidden; border-radius:16px;
+}
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-header { flex:0 0 auto; display:flex; align-items:center; background:#8B3445; color:#fff8ef; padding:9px 13px; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-header .modal-title { color:#fff8ef; font-size:15px; line-height:1.4; margin:0; flex:1; min-width:0; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-header .btn-close { flex:0 0 auto; margin-left:auto; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-body { flex:1 1 auto; min-height:0; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+:is(#spot-detail-modal,#timetable-modal,#schedule-detail-modal) .modal-footer { flex:0 0 auto; }
+#spot-detail-modal .spot-detail-title-line { display:flex; flex-wrap:nowrap; align-items:center; gap:7px; }
+#spot-detail-modal .spot-detail-name { flex:1 1 auto; min-width:0; margin:0; font-size:clamp(17px,5.2vw,22px); color:#8B3445; }
+#spot-detail-modal .spot-detail-link.spot-name-map { display:inline-flex; flex:0 0 32px; width:32px; height:32px; margin:0; padding:0; color:#8B3445; }
+#spot-detail-modal .spot-fact-row { display:grid; grid-template-columns: minmax(78px,34%) minmax(0,1fr); gap:8px; padding:7px 0; border-bottom:1px solid #d9cbb7; }
+#spot-detail-modal .spot-fact-row dt { display:flex; align-items:baseline; gap:5px; min-width:0; color:#8B3445; font-size:12px; }
+#spot-detail-modal .spot-fact-row dd { margin:0; min-width:0; color:#493e36; font-size:12px; }
+#spot-detail-modal .spot-fact-row dd small { display:block; margin-top:2px; }

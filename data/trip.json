@@ -1,0 +1,2551 @@
+{
+  "schemaVersion": 1,
+  "trip": {
+    "id": "kyoto-2026-11",
+    "title": "秋の京都",
+    "date": "2026-11-26",
+    "timezone": "Asia/Tokyo",
+    "destination": "京都",
+    "participants": 2,
+    "weatherLocation": {
+      "name": "京都市",
+      "latitude": 35.0116,
+      "longitude": 135.7681
+    },
+    "progressGroups": [
+      {
+        "label": "嵐山エリア",
+        "from": "to-bridge",
+        "to": "to-lunch"
+      },
+      {
+        "label": "昼食",
+        "from": "lunch",
+        "to": "to-keage"
+      },
+      {
+        "label": "永観堂・南禅寺",
+        "from": "to-eikando",
+        "to": "to-higashiyama"
+      },
+      {
+        "label": "ねねの道",
+        "from": "higashiyama",
+        "to": "to-kiyomizu"
+      },
+      {
+        "label": "清水寺",
+        "from": "kiyomizu",
+        "to": "to-dinner"
+      },
+      {
+        "label": "夕食",
+        "from": "dinner",
+        "to": "dinner"
+      }
+    ]
+  },
+  "schedules": [
+    {
+      "id": "meeting",
+      "sortOrder": 0,
+      "type": "other",
+      "title": "阪急大阪梅田駅集合",
+      "shortTitle": null,
+      "startTime": "06:00",
+      "endTime": "06:14",
+      "spotIds": [],
+      "description": "6:14発の電車に乗車",
+      "showInProgress": false,
+      "note": null,
+      "image": "assets/spots/hankyu-umeda.jpg"
+    },
+    {
+      "id": "to-arashiyama",
+      "sortOrder": 10,
+      "type": "transport",
+      "title": "大阪梅田から嵐山へ",
+      "shortTitle": null,
+      "startTime": "06:14",
+      "endTime": "07:00",
+      "spotIds": [],
+      "description": "阪急京都線・嵐山線（桂で乗換）",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "to-bridge",
+      "sortOrder": 20,
+      "type": "transport",
+      "title": "渡月橋へ",
+      "shortTitle": null,
+      "startTime": "07:00",
+      "endTime": "07:10",
+      "spotIds": [],
+      "description": "改札口は1カ所。渡月橋方面へ",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "bridge",
+      "sortOrder": 30,
+      "type": "sightseeing",
+      "title": "渡月橋",
+      "shortTitle": null,
+      "startTime": "07:10",
+      "endTime": "07:25",
+      "spotIds": [
+        "togetsukyo"
+      ],
+      "description": "朝の渡月橋・桂川散策",
+      "showInProgress": true,
+      "note": null
+    },
+    {
+      "id": "to-tenryu",
+      "sortOrder": 40,
+      "type": "transport",
+      "title": "天龍寺へ",
+      "shortTitle": null,
+      "startTime": "07:25",
+      "endTime": "07:30",
+      "spotIds": [],
+      "description": "渡月橋北詰から長辻通を北上。徒歩5〜10分",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "tenryu",
+      "sortOrder": 50,
+      "type": "sightseeing",
+      "title": "天龍寺",
+      "shortTitle": null,
+      "startTime": "07:30",
+      "endTime": "08:30",
+      "spotIds": [
+        "tenryuji"
+      ],
+      "description": "庭園のみ拝観・北門から竹林へ",
+      "showInProgress": true,
+      "note": "北門受付は8:30から。退出可否は現地確認。"
+    },
+    {
+      "id": "bamboo",
+      "sortOrder": 60,
+      "type": "sightseeing",
+      "title": "竹林の小径・野宮神社",
+      "shortTitle": null,
+      "startTime": "08:30",
+      "endTime": "08:45",
+      "spotIds": [
+        "bamboo-grove",
+        "nonomiya"
+      ],
+      "description": "朝の竹林散策・野宮神社にも立ち寄る",
+      "showInProgress": true,
+      "note": null
+    },
+    {
+      "id": "to-jojakko",
+      "sortOrder": 70,
+      "type": "transport",
+      "title": "常寂光寺へ",
+      "shortTitle": null,
+      "startTime": "08:45",
+      "endTime": "09:00",
+      "spotIds": [],
+      "description": "8:55頃到着、9:00開門待ち",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "jojakko",
+      "sortOrder": 80,
+      "type": "sightseeing",
+      "title": "常寂光寺",
+      "shortTitle": null,
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "spotIds": [
+        "jojakkoji"
+      ],
+      "description": "開門直後に拝観・紅葉散策",
+      "showInProgress": true,
+      "note": null
+    },
+    {
+      "id": "to-lunch",
+      "sortOrder": 90,
+      "type": "transport",
+      "title": "松ヶ枝へ",
+      "shortTitle": null,
+      "startTime": "10:00",
+      "endTime": "10:30",
+      "spotIds": [],
+      "description": "小倉池周辺を散策しながら、10:25到着目標",
+      "showInProgress": false,
+      "note": "余裕があれば御髪神社・亀山公園経由。予約時間優先。"
+    },
+    {
+      "id": "lunch",
+      "sortOrder": 100,
+      "type": "meal",
+      "title": "とうふと湯葉 松ヶ枝",
+      "shortTitle": null,
+      "startTime": "10:30",
+      "endTime": "11:30",
+      "spotIds": [
+        "matsugae"
+      ],
+      "description": "嵐山で湯豆腐ランチ（予約済）",
+      "showInProgress": true,
+      "note": null
+    },
+    {
+      "id": "arashiyama",
+      "sortOrder": 110,
+      "type": "sightseeing",
+      "title": "嵐山自由散策",
+      "shortTitle": null,
+      "startTime": "11:30",
+      "endTime": "11:55",
+      "spotIds": [],
+      "description": "商店街・お土産探し・食べ歩き",
+      "showInProgress": true,
+      "note": "早く終われば前の電車へ。お土産店はスポットの候補から。",
+      "image": "assets/spots/togetsukyo.jpg"
+    },
+    {
+      "id": "to-randen",
+      "sortOrder": 120,
+      "type": "transport",
+      "title": "嵐電嵐山駅へ",
+      "shortTitle": null,
+      "startTime": "11:55",
+      "endTime": "12:03",
+      "spotIds": [],
+      "description": "電車の時刻に合わせて移動",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "to-keage",
+      "sortOrder": 130,
+      "type": "transport",
+      "title": "嵐山から蹴上へ",
+      "shortTitle": null,
+      "startTime": "12:03",
+      "endTime": "12:37",
+      "spotIds": [],
+      "description": "嵐電・地下鉄東西線で永観堂方面へ",
+      "showInProgress": false,
+      "note": "乗換6分。間に合わなければ次便。時刻は会話で決めた予定表・当日確認。"
+    },
+    {
+      "id": "to-eikando",
+      "sortOrder": 140,
+      "type": "transport",
+      "title": "永観堂へ",
+      "shortTitle": null,
+      "startTime": "12:37",
+      "endTime": "13:00",
+      "spotIds": [],
+      "description": "1番出口・徒歩約15分。入場待ちを考慮",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "eikando",
+      "sortOrder": 150,
+      "type": "sightseeing",
+      "title": "永観堂",
+      "shortTitle": null,
+      "startTime": "13:00",
+      "endTime": "14:10",
+      "spotIds": [
+        "eikando"
+      ],
+      "description": "午後のメイン・紅葉をゆっくり拝観",
+      "showInProgress": true,
+      "note": "混雑したら南禅寺を短縮"
+    },
+    {
+      "id": "to-nanzen",
+      "sortOrder": 160,
+      "type": "transport",
+      "title": "南禅寺へ",
+      "shortTitle": null,
+      "startTime": "14:10",
+      "endTime": "14:20",
+      "spotIds": [],
+      "description": "徒歩約10分",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "nanzen",
+      "sortOrder": 170,
+      "type": "sightseeing",
+      "title": "南禅寺",
+      "shortTitle": null,
+      "startTime": "14:20",
+      "endTime": "15:00",
+      "spotIds": [
+        "nanzenji"
+      ],
+      "description": "三門・水路閣。余裕があれば方丈庭園（600円）",
+      "showInProgress": true,
+      "note": "15:00頃エリア出発目標。永観堂優先。"
+    },
+    {
+      "id": "to-higashiyama",
+      "sortOrder": 180,
+      "type": "transport",
+      "title": "二寧坂へ",
+      "shortTitle": null,
+      "startTime": "15:00",
+      "endTime": "15:40",
+      "spotIds": [],
+      "description": "青蓮院・知恩院・円山公園・ねねの道経由",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "higashiyama",
+      "sortOrder": 190,
+      "type": "sightseeing",
+      "title": "東山自由散策・休憩",
+      "shortTitle": null,
+      "startTime": "15:40",
+      "endTime": "17:00",
+      "spotIds": [
+        "ninenzaka",
+        "sannenzaka"
+      ],
+      "description": "街並み・お土産探し・甘味休憩",
+      "showInProgress": true,
+      "note": "休憩候補はスポット一覧から。17時に切り上げ。"
+    },
+    {
+      "id": "to-kiyomizu",
+      "sortOrder": 200,
+      "type": "transport",
+      "title": "清水寺へ",
+      "shortTitle": null,
+      "startTime": "17:00",
+      "endTime": "17:30",
+      "spotIds": [],
+      "description": "17:20頃到着、入場・点灯待ち",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "kiyomizu",
+      "sortOrder": 210,
+      "type": "sightseeing",
+      "title": "清水寺ライトアップ",
+      "shortTitle": null,
+      "startTime": "17:30",
+      "endTime": "18:40",
+      "spotIds": [
+        "kiyomizu"
+      ],
+      "description": "秋の夜間特別拝観・紅葉ライトアップ",
+      "showInProgress": true,
+      "note": null
+    },
+    {
+      "id": "to-dinner",
+      "sortOrder": 220,
+      "type": "transport",
+      "title": "いろはかるたへ",
+      "shortTitle": null,
+      "startTime": "18:40",
+      "endTime": "19:30",
+      "spotIds": [],
+      "description": "夜の東山・祇園を抜けて木屋町へ。19:20頃到着目標",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "dinner",
+      "sortOrder": 230,
+      "type": "meal",
+      "title": "いろはかるた 木屋町本店",
+      "shortTitle": null,
+      "startTime": "19:30",
+      "endTime": "20:50",
+      "spotIds": [
+        "iroha"
+      ],
+      "description": "おばんざい・焼き鳥・釜飯（予約済）",
+      "showInProgress": true,
+      "note": null
+    },
+    {
+      "id": "to-station",
+      "sortOrder": 240,
+      "type": "transport",
+      "title": "京都河原町駅へ",
+      "shortTitle": null,
+      "startTime": "20:50",
+      "endTime": "21:08",
+      "spotIds": [],
+      "description": "食事終了に合わせて移動・電車待ち",
+      "showInProgress": false,
+      "note": null
+    },
+    {
+      "id": "to-osaka",
+      "sortOrder": 250,
+      "type": "transport",
+      "title": "大阪梅田へ",
+      "shortTitle": null,
+      "startTime": "21:08",
+      "endTime": "21:54",
+      "spotIds": [],
+      "description": "阪急京都線 準特急（目安）",
+      "showInProgress": false,
+      "note": "夕食終了に合わせて前後の便を利用。帰宅目標22:30。"
+    }
+  ],
+  "spots": [
+    {
+      "id": "togetsukyo",
+      "name": "渡月橋",
+      "reading": "とげつきょう",
+      "type": "sightseeing",
+      "area": "嵐山",
+      "description": "桂川に架かる嵐山のシンボル。山の紅葉と川面を一緒に楽しめる。",
+      "image": "assets/spots/togetsukyo.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "大人",
+          "price": 0,
+          "note": null
+        }
+      ],
+      "durationMinutes": 15,
+      "address": "京都市右京区嵯峨・西京区嵐山",
+      "phone": null,
+      "access": "阪急嵐山駅から徒歩約5〜10分",
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B8%A1%E6%9C%88%E6%A9%8B+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "朝の桂川と紅葉",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "橋の南北からの山並み",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": null
+    },
+    {
+      "id": "tenryuji",
+      "name": "天龍寺",
+      "reading": "てんりゅうじ",
+      "type": "temple",
+      "area": "嵐山",
+      "description": "世界遺産の禅寺。嵐山を借景にした曹源池庭園が見どころ。",
+      "image": "assets/spots/tenryuji.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "07:30",
+          "closeTime": "17:00",
+          "lastAdmissionTime": "16:50",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "大人",
+          "price": 500,
+          "note": null
+        }
+      ],
+      "durationMinutes": 60,
+      "address": "京都市右京区嵯峨天龍寺芒ノ馬場町68",
+      "phone": null,
+      "access": "渡月橋北詰から長辻通を北上",
+      "officialUrl": "https://www.tenryuji.com/visit/",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E9%BE%8D%E5%AF%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "曹源池庭園",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "百花苑から北門へ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "11/14〜30は庭園早朝参拝7:30〜。北門受付は8:30〜。今回は庭園のみ。"
+    },
+    {
+      "id": "bamboo-grove",
+      "name": "竹林の小径",
+      "reading": "ちくりんのこみち",
+      "type": "nature",
+      "area": "嵐山",
+      "description": "青竹が左右に広がる嵯峨野の散策路。天龍寺北門から歩いて立ち寄れる。",
+      "image": "assets/spots/bamboo-grove.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "大人",
+          "price": 0,
+          "note": null
+        }
+      ],
+      "durationMinutes": 15,
+      "address": "京都市右京区嵯峨天龍寺立石町周辺",
+      "phone": null,
+      "access": "天龍寺北門すぐ",
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E6%9E%97%E3%81%AE%E5%B0%8F%E5%BE%84+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "竹林の小径",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "朝の静かな竹林",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": null
+    },
+    {
+      "id": "nonomiya",
+      "name": "野宮神社",
+      "reading": "ののみやじんじゃ",
+      "type": "shrine",
+      "area": "嵐山",
+      "description": "竹林の中にある、源氏物語ゆかりの神社。縁結びでも知られる。",
+      "image": "assets/spots/nonomiya.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "受付",
+          "openTime": "09:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": "16:30",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "大人",
+          "price": 0,
+          "note": null
+        }
+      ],
+      "durationMinutes": null,
+      "address": "京都市右京区嵯峨野宮町1",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=501",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%87%8E%E5%AE%AE%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "黒木鳥居",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "苔の庭",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "朝の立ち寄りは外観・参道中心。授与所等の受付は9時から。"
+    },
+    {
+      "id": "jojakkoji",
+      "name": "常寂光寺",
+      "reading": "じょうじゃっこうじ",
+      "type": "temple",
+      "area": "嵐山",
+      "description": "小倉山の斜面にある日蓮宗の寺院。苔と石段を彩る紅葉が美しい。",
+      "image": "assets/spots/jojakkoji.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観時間",
+          "openTime": "09:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": "16:30",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "通常拝観",
+          "price": 600,
+          "note": null
+        },
+        {
+          "label": "本堂特別拝観",
+          "price": 600,
+          "note": "希望時のみ別途（11/18〜30）"
+        }
+      ],
+      "durationMinutes": 60,
+      "address": "京都市右京区嵯峨小倉山小倉町3",
+      "phone": "075-861-0435",
+      "access": null,
+      "officialUrl": "https://jojakko-ji.or.jp/",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E5%AF%82%E5%85%89%E5%AF%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "仁王門と石段",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "多宝塔",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "山腹からの眺め",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": null
+    },
+    {
+      "id": "matsugae",
+      "name": "とうふと湯葉 松ヶ枝",
+      "reading": "まつがえ",
+      "type": "restaurant",
+      "area": "嵐山",
+      "description": "渡月橋北詰の豆腐・湯葉料理店。秋限定の御膳から選べる。",
+      "image": "assets/spots/matsugae.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "観光シーズン",
+          "openTime": "10:30",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": "元日休業",
+      "fees": [],
+      "durationMinutes": 60,
+      "address": "京都市右京区嵯峨天龍寺芒ノ馬場町3",
+      "phone": "075-872-0102",
+      "access": "嵐電嵐山駅から徒歩3分",
+      "officialUrl": "https://yoshimura-gr.com/matsugae/shop/",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26022204/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%81%86%E3%81%B5%E3%81%A8%E6%B9%AF%E8%91%89+%E6%9D%BE%E3%83%B6%E6%9E%9D+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "自家製豆腐・湯葉",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "季節の天ぷらやご飯",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [
+        {
+          "name": "秋麗の膳 はんなりセット",
+          "price": 2200,
+          "description": "京のおばんざい三種・豆腐サラダ・湯葉あんかけ丼または天ぷら丼・そば麹のつけもの",
+          "image": null
+        },
+        {
+          "name": "秋麗の膳 松ケ枝",
+          "price": 2800,
+          "description": "京のおばんざい三種・湯豆腐または手桶豆腐・季節の天ぷら盛り合わせ・秋の味覚ご飯または湯葉あんかけ丼・そば麹のつけもの",
+          "image": null
+        },
+        {
+          "name": "秋麗の膳 彩風",
+          "price": 3380,
+          "description": "京のおばんざい三種・引き上げ湯葉・湯豆腐または手桶豆腐・季節の天ぷら盛り合わせ・ひとくち秋の味覚ご飯・ごま豆乳の担々にゅうめん・そば麹のつけもの",
+          "image": null
+        },
+        {
+          "name": "湯豆腐",
+          "price": 1000,
+          "description": "手桶豆腐も選択可",
+          "image": null
+        },
+        {
+          "name": "自家製湯葉刺し",
+          "price": 860,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "季節の天ぷら盛り合わせ",
+          "price": 1800,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "天ぷら丼",
+          "price": 1940,
+          "description": "京のおばんざいとそば麹のつけもの付き",
+          "image": null
+        }
+      ],
+      "note": "10:30予約済（2名）。秋麗の献立は10/23〜12/7。価格は添付メニューの税込表示。"
+    },
+    {
+      "id": "eikando",
+      "name": "永観堂",
+      "reading": "えいかんどう（ぜんりんじ）",
+      "type": "temple",
+      "area": "東山",
+      "description": "紅葉で知られる禅林寺。堂宇や庭園を巡り、秋の寺宝展も楽しめる。",
+      "image": "assets/spots/eikando.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "秋の寺宝展",
+          "openTime": "09:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": "16:00",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "一般・昼間",
+          "price": 1500,
+          "note": null
+        }
+      ],
+      "durationMinutes": 70,
+      "address": "京都市左京区永観堂町48",
+      "phone": null,
+      "access": "地下鉄蹴上駅から徒歩約15分",
+      "officialUrl": "https://eikando.or.jp/haikan.html",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B0%B8%E8%A6%B3%E5%A0%82+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "多宝塔と紅葉",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "放生池・錦雲橋",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "阿弥陀堂のみかえり阿弥陀",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "11/11〜12/6の秋の寺宝展。午後のメイン。夜間拝観とは入替制。"
+    },
+    {
+      "id": "nanzenji",
+      "name": "南禅寺",
+      "reading": "なんぜんじ",
+      "type": "temple",
+      "area": "東山",
+      "description": "臨済宗南禅寺派の大本山。巨大な三門と赤レンガの水路閣が印象的。",
+      "image": "assets/spots/nanzenji.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "有料拝観",
+          "openTime": "08:40",
+          "closeTime": "17:00",
+          "lastAdmissionTime": "16:40",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "境内・水路閣",
+          "price": 0,
+          "note": null
+        },
+        {
+          "label": "方丈庭園",
+          "price": 600,
+          "note": null
+        },
+        {
+          "label": "三門楼上",
+          "price": 600,
+          "note": null
+        }
+      ],
+      "durationMinutes": 40,
+      "address": "京都市左京区南禅寺福地町",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://nanzenji.or.jp/about_rinzaishu/visit",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E7%A6%85%E5%AF%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "三門の外観",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "水路閣",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "方丈庭園（時間に余裕があれば）",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "永観堂優先。15時頃にエリアを出る目標。各有料拝観は別料金。"
+    },
+    {
+      "id": "ninenzaka",
+      "name": "二寧坂",
+      "reading": "にねんざか",
+      "type": "sightseeing",
+      "area": "東山",
+      "description": "石段と町家が続く東山の散策路。甘味処や京土産の店が並ぶ。",
+      "image": "assets/spots/ninenzaka.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区桝屋町周辺",
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E5%AF%A7%E5%9D%82+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "石畳と町並み",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "甘味・お土産探し",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "店ごとに営業時間が異なる。17時を目安に清水寺方面へ。"
+    },
+    {
+      "id": "sannenzaka",
+      "name": "産寧坂",
+      "reading": "さんねんざか",
+      "type": "sightseeing",
+      "area": "東山",
+      "description": "清水寺へ続く歴史ある石畳の坂道。町家の店を眺めながら散策できる。",
+      "image": "assets/spots/sannenzaka.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区清水三丁目周辺",
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%94%A3%E5%AF%A7%E5%9D%82+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "石段と町家",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "京菓子・お香・七味",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": null
+    },
+    {
+      "id": "kiyomizu",
+      "name": "清水寺",
+      "reading": "きよみずでら",
+      "type": "temple",
+      "area": "東山",
+      "description": "京都を代表する世界遺産。秋の夜は舞台や紅葉が照らされ、街の夜景も楽しめる。",
+      "image": "assets/spots/kiyomizu.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "17:30",
+          "closeTime": "21:30",
+          "lastAdmissionTime": "21:00",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [
+        {
+          "label": "大人",
+          "price": 500,
+          "note": null
+        }
+      ],
+      "durationMinutes": 70,
+      "address": "京都市東山区清水一丁目294",
+      "phone": "075-551-1234",
+      "access": null,
+      "officialUrl": "https://www.kiyomizudera.or.jp/news/yakan-haikanautumn.php",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%B0%B4%E5%AF%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "清水の舞台と紅葉",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "奥の院側から本堂を眺める",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "観音慈悲光（青い光）",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "秋の夜間特別拝観11/21〜30。予約不要。18:40頃に夕食へ向かう。"
+    },
+    {
+      "id": "iroha",
+      "name": "いろはかるた 木屋町本店",
+      "reading": "いろはかるた",
+      "type": "restaurant",
+      "area": "河原町",
+      "description": "木屋町の焼きとり・釜飯居酒屋。京の一品や魚料理も揃い、二人でシェアしやすい。",
+      "image": "assets/spots/iroha.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "17:00",
+          "closeTime": "00:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": 80,
+      "address": "京都市中京区東木屋町四条上ル2下樵木町197-2",
+      "phone": "075-223-3434",
+      "access": "阪急京都河原町駅・京阪祇園四条駅近く",
+      "officialUrl": null,
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26001139/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%82%8D%E3%81%AF%E3%81%8B%E3%82%8B%E3%81%9F+%E6%9C%A8%E5%B1%8B%E7%94%BA%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "京生麩・湯葉料理",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "炊き立て釜飯",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "焼きとり盛り合せ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [
+        {
+          "name": "大根柚子煮",
+          "price": 429,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "九条葱と京揚げのぬた",
+          "price": 550,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "京生麩田楽",
+          "price": 583,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "京生麩と湯葉のお造り",
+          "price": 803,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "京湯葉春巻",
+          "price": 803,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "鶏釜飯",
+          "price": 858,
+          "description": "炊き上がり約30分",
+          "image": null
+        },
+        {
+          "name": "甘鯛釜飯",
+          "price": 1100,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "牛肉釜飯",
+          "price": 1078,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "うなぎ釜飯",
+          "price": 1463,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "焼きとり盛り合せ5串",
+          "price": 1155,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "さわら西京焼",
+          "price": 1045,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "ねぎチーズとんぺい焼",
+          "price": 638,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "造り盛り合せ3種",
+          "price": 1408,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "九条葱の豚肉巻揚げ",
+          "price": 550,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "海老と野菜の天ぷら盛り合せ",
+          "price": 968,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "京都中華そば",
+          "price": 858,
+          "description": null,
+          "image": null
+        },
+        {
+          "name": "宇治抹茶アイス黒豆添え",
+          "price": 528,
+          "description": null,
+          "image": null
+        }
+      ],
+      "note": "19:30予約済（2名）。予算3,000〜4,000円／人。釜飯は炊き上がりまで約30分、早めに注文。掲載料理は一例。"
+    },
+    {
+      "id": "marun",
+      "name": "嵐山まるん",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "かわいらしい京菓子と雑貨を扱う土産店。",
+      "image": "assets/spots/marun.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "18:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.maisendo.co.jp/marun.html",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26020345/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E3%81%BE%E3%82%8B%E3%82%93+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "金平糖・京飴",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "小さなギフト",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "kyo-baum",
+      "name": "京ばあむ 嵐山店",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "宇治抹茶と豆乳を使ったバームクーヘンの専門店。",
+      "image": "assets/spots/kyo-baum.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": "無休",
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市右京区嵯峨天龍寺造路町20-25",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.kyobaum.com/shop/",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26038263/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E3%81%B0%E3%81%82%E3%82%80+%E5%B5%90%E5%B1%B1%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "嵐山限定デザインの京ばあむ",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "京ばあむソフト",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "ochanoko",
+      "name": "おちゃのこさいさい 嵐山店",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "京七味や唐辛子を使った調味料の専門店。",
+      "image": "assets/spots/ochanoko.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "17:30",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.ochanokosaisai.com/f/shoplist/",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26024657/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%81%A1%E3%82%83%E3%81%AE%E3%81%93%E3%81%95%E3%81%84%E3%81%95%E3%81%84+%E5%B5%90%E5%B1%B1%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "舞妓はんひぃ〜ひぃ〜",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "京七味・ふりかけ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "malebranche",
+      "name": "マールブランシュ 嵐山店",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "京都の洋菓子店。嵐山昇龍苑の1階にある。",
+      "image": "assets/spots/malebranche.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市右京区嵯峨天龍寺門前 嵐山昇龍苑1F",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.kyoto-quality.com/s-arashiyama",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26023946/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%83%BC%E3%83%AB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B7%E3%83%A5+%E5%B5%90%E5%B1%B1%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "お濃茶ラングドシャ 茶の菓",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "茶茶棒（販売状況は店頭確認）",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "otabe",
+      "name": "おたべ 嵐山店",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "生八ッ橋など京都の定番菓子を探す候補。",
+      "image": "assets/spots/otabe.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26039882/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%81%9F%E3%81%B9+%E5%B5%90%E5%B1%B1%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "生八ッ橋",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "季節の味・詰合せ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "nishiri",
+      "name": "京つけもの西利 嵐山 昇龍苑店",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "京漬物の専門店。嵐山昇龍苑の1階。",
+      "image": "assets/spots/nishiri.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "営業時間",
+          "openTime": "10:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": "無休（掲載情報）",
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市右京区嵯峨天龍寺芒ノ馬場町40-8 嵐山昇龍苑1階",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://link.kyoto.travel/special-offer-area/saga-arashiyama/",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260403/26025247/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E3%81%A4%E3%81%91%E3%82%82%E3%81%AE%E8%A5%BF%E5%88%A9+%E5%B5%90%E5%B1%B1+%E6%98%87%E9%BE%8D%E8%8B%91%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "千枚漬など京漬物",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "小袋の詰合せ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "snoopy",
+      "name": "SNOOPY茶屋 京都嵐山店",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "PEANUTSと日本の伝統工芸を組み合わせた雑貨店。",
+      "image": "assets/spots/snoopy.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.snoopychaya.jp/",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=SNOOPY%E8%8C%B6%E5%B1%8B+%E4%BA%AC%E9%83%BD%E5%B5%90%E5%B1%B1%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "手ぬぐい・ハンカチ",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "和雑貨",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "kazurano",
+      "name": "嵐山かづら野",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "渡月橋の袂にある総合京土産店。いろいろまとめて見られる。",
+      "image": "assets/spots/kazurano.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://ja.kyoto.travel/tourism/single01.php?category_id=5&tourism_id=2623",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E3%81%8B%E3%81%A5%E3%82%89%E9%87%8E+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "八ッ橋・京漬物",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "抹茶菓子・雑貨",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "square",
+      "name": "嵐山駅 はんなり・ほっこりスクエア",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "嵐電嵐山駅に併設された商業施設。電車前の買い物に便利。",
+      "image": "assets/spots/square.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.kyotoarashiyama.jp/shop",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E9%A7%85+%E3%81%AF%E3%82%93%E3%81%AA%E3%82%8A%E3%83%BB%E3%81%BB%E3%81%A3%E3%81%93%E3%82%8A%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "京菓子・和雑貨",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "キモノフォレスト",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・在庫は現地確認。"
+    },
+    {
+      "id": "kasagi",
+      "name": "かさぎ屋",
+      "reading": null,
+      "type": "cafe",
+      "area": "東山",
+      "description": "二寧坂にある大正3年創業の小さな甘味処。",
+      "image": "assets/spots/kasagi.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "17:30",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区高台寺桝屋町349",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.kyoto-kankou.or.jp/info_search/141",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26000596/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%95%E3%81%8E%E5%B1%8B+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "三色おはぎ",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "ぜんざい・お汁粉",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "ito",
+      "name": "伊藤久右衛門 清水産寧坂店",
+      "reading": null,
+      "type": "cafe",
+      "area": "東山",
+      "description": "宇治茶や抹茶菓子の専門店。庭を眺めながら甘味休憩もできる。",
+      "image": "assets/spots/ito.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "18:00",
+          "lastAdmissionTime": "17:30",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26041334/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8A%E8%97%A4%E4%B9%85%E5%8F%B3%E8%A1%9B%E9%96%80+%E6%B8%85%E6%B0%B4%E7%94%A3%E5%AF%A7%E5%9D%82%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "抹茶スイーツ・宇治茶",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "お土産用の抹茶菓子",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "fujinami",
+      "name": "京だんご 藤菜美 高台寺店",
+      "reading": null,
+      "type": "cafe",
+      "area": "東山",
+      "description": "京だんご・わらび餅を扱う甘味店。小腹を満たす立ち寄り候補。",
+      "image": "assets/spots/fujinami.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:30",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://kyoto-fujinami.jp/shop/",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26032898/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E3%81%A0%E3%82%93%E3%81%94+%E8%97%A4%E8%8F%9C%E7%BE%8E+%E9%AB%98%E5%8F%B0%E5%AF%BA%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "みたらし団子",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "わらび餅",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "ishidatami",
+      "name": "石畳",
+      "reading": null,
+      "type": "cafe",
+      "area": "東山",
+      "description": "甘いもの以外の軽食が欲しいときのコロッケ候補。",
+      "image": "assets/spots/ishidatami.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%9F%B3%E7%95%B3+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "コロッケ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "shichimi",
+      "name": "七味家本舗",
+      "reading": null,
+      "type": "shop",
+      "area": "東山",
+      "description": "清水坂と産寧坂が交わる場所にある老舗の薬味店。",
+      "image": "assets/spots/shichimi.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "09:30",
+          "closeTime": "17:30",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.shichimiya.co.jp/store",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26007238/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%83%E5%91%B3%E5%AE%B6%E6%9C%AC%E8%88%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "京七味・山椒",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "調味料の詰合せ",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "ousu",
+      "name": "おうすの里 産寧坂店",
+      "reading": null,
+      "type": "shop",
+      "area": "東山",
+      "description": "京都の梅専門店。梅干しや梅加工品を探すならここ。",
+      "image": "assets/spots/ousu.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:30",
+          "closeTime": "18:30",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区清水三丁目342-1",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.ousunosato.co.jp/shop_list.html",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26027506/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8A%E3%81%86%E3%81%99%E3%81%AE%E9%87%8C+%E7%94%A3%E5%AF%A7%E5%9D%82%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "梅干し",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "梅製品",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "sannei-marun",
+      "name": "産寧坂まるん",
+      "reading": null,
+      "type": "shop",
+      "area": "東山",
+      "description": "産寧坂の石段途中にある京菓子・雑貨店。",
+      "image": "assets/spots/sannei-marun.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "18:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": "年中無休（臨時変更あり）",
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区清水三丁目317-1",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.maisendo.co.jp/marun.html",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%94%A3%E5%AF%A7%E5%9D%82%E3%81%BE%E3%82%8B%E3%82%93+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "金平糖・京飴",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "かわいいパッケージのお菓子",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "shoyeido",
+      "name": "松栄堂 産寧坂店",
+      "reading": null,
+      "type": "shop",
+      "area": "東山",
+      "description": "町家風の店内に香りの品が揃う香老舗。",
+      "image": "assets/spots/shoyeido.jpg",
+      "images": [],
+      "businessHours": [
+        {
+          "label": "拝観・営業",
+          "openTime": "10:00",
+          "closeTime": "18:00",
+          "lastAdmissionTime": null,
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://www.shoyeido.co.jp/shop-info/sanneizaka.html",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E6%A0%84%E5%A0%82+%E7%94%A3%E5%AF%A7%E5%9D%82%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "産寧坂店限定 ときの香シリーズ",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "お香・香りの小物",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "seiryuen",
+      "name": "青龍苑",
+      "reading": null,
+      "type": "shop",
+      "area": "東山",
+      "description": "産寧坂周辺の商業施設。京土産や甘味の候補をまとめて見られる。",
+      "image": "assets/spots/seiryuen.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://seiryu-en.com/",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%9D%92%E9%BE%8D%E8%8B%91+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "京土産",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "甘味・茶",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+    },
+    {
+      "id": "ogura",
+      "name": "小倉池・御髪神社",
+      "reading": null,
+      "type": "nature",
+      "area": "嵐山",
+      "description": "竹林近くの池と、髪にゆかりのある御髪神社。",
+      "image": "assets/spots/ogura.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市右京区嵯峨小倉山田渕山町10（御髪神社）",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://ja.kyoto.travel/tourism/single01.php?category_id=7&tourism_id=614",
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E5%80%89%E6%B1%A0%E3%83%BB%E5%BE%A1%E9%AB%AA%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "池越しの紅葉",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "御髪神社",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "時間に余裕があれば立ち寄り"
+    },
+    {
+      "id": "kameyama",
+      "name": "嵐山公園 亀山地区",
+      "reading": null,
+      "type": "nature",
+      "area": "嵐山",
+      "description": "嵐山の山側にある公園。坂道や展望台から保津川を眺められる。",
+      "image": "assets/spots/kameyama.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市右京区嵯峨亀ノ尾町周辺",
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E5%85%AC%E5%9C%92+%E4%BA%80%E5%B1%B1%E5%9C%B0%E5%8C%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "保津川・山並み",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "園内の紅葉",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "坂道あり。昼食予約前は時間に注意。"
+    },
+    {
+      "id": "nejiri",
+      "name": "ねじりまんぽ",
+      "reading": null,
+      "type": "sightseeing",
+      "area": "東山",
+      "description": "南禅寺への道にあるレンガの斜め積みが特徴的なトンネル。",
+      "image": "assets/spots/nejiri.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区粟田口山下町周辺",
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%AD%E3%81%98%E3%82%8A%E3%81%BE%E3%82%93%E3%81%BD+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "レンガのらせん状の積み方",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "時間に余裕があれば立ち寄り"
+    },
+    {
+      "id": "kodaiji",
+      "name": "高台寺",
+      "reading": null,
+      "type": "temple",
+      "area": "東山",
+      "description": "ねねゆかりの寺院。東山散策途中の立ち寄り候補。",
+      "image": "assets/spots/kodaiji.jpg",
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区高台寺下河原町526",
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%8F%B0%E5%AF%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "庭園・紅葉",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "ねねの道",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "今回は清水寺のライトアップを優先。"
+    }
+  ],
+  "routes": [
+    {
+      "scheduleId": "to-arashiyama",
+      "transportType": "train",
+      "operator": "阪急電鉄",
+      "routeUrl": null,
+      "links": [
+        {
+          "label": "阪急公式時刻表",
+          "url": "https://www.hankyu.co.jp/station/html/HK-01_ky_2_w.html"
+        }
+      ],
+      "timetable": [
+        {
+          "departureTime": "06:14",
+          "arrivalTime": "06:49",
+          "serviceType": "準特急",
+          "note": "桂06:53発 → 嵐山07:00着"
+        },
+        {
+          "departureTime": "06:29",
+          "arrivalTime": null,
+          "serviceType": null,
+          "note": "桂乗換 → 嵐山07:22着"
+        },
+        {
+          "departureTime": "06:38",
+          "arrivalTime": null,
+          "serviceType": null,
+          "note": "桂乗換 → 嵐山07:29着"
+        }
+      ],
+      "note": null,
+      "isOrigin": true,
+      "id": "umeda-katsura",
+      "sortOrder": 10,
+      "departure": "大阪梅田駅",
+      "arrival": "桂駅",
+      "lineName": "京都線",
+      "serviceType": "準特急",
+      "direction": "京都河原町行",
+      "platform": "2・3",
+      "arrivalPlatform": "2・3",
+      "boardingPosition": "中方車両",
+      "carCount": 8,
+      "stopCount": 6,
+      "departureTime": "06:14",
+      "arrivalTime": "06:49",
+      "duration": 35,
+      "fare": 410,
+      "fareNote": "全区間"
+    },
+    {
+      "scheduleId": "to-arashiyama",
+      "transportType": "train",
+      "operator": "阪急電鉄",
+      "routeUrl": null,
+      "links": [
+        {
+          "label": "桂駅時刻表",
+          "url": "https://www.hankyu.co.jp/station/html/HK-81_ar_2_w.html"
+        }
+      ],
+      "timetable": [],
+      "note": null,
+      "isOrigin": true,
+      "id": "katsura-arashiyama",
+      "sortOrder": 20,
+      "departure": "桂駅",
+      "arrival": "阪急嵐山駅",
+      "lineName": "嵐山線",
+      "serviceType": "普通",
+      "direction": "嵐山行",
+      "platform": "1・C",
+      "arrivalPlatform": "1・2",
+      "boardingPosition": "前から1両目",
+      "stopCount": 3,
+      "departureTime": "06:53",
+      "arrivalTime": "07:00",
+      "duration": 7,
+      "fare": null
+    },
+    {
+      "id": "to-bridge-walk",
+      "scheduleId": "to-bridge",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "阪急嵐山駅",
+      "arrival": "渡月橋",
+      "departureTime": "07:00",
+      "arrivalTime": "07:10",
+      "duration": 10,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E9%98%AA%E6%80%A5%E5%B5%90%E5%B1%B1%E9%A7%85&destination=%E6%B8%A1%E6%9C%88%E6%A9%8B&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-tenryu-walk",
+      "scheduleId": "to-tenryu",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "渡月橋",
+      "arrival": "天龍寺 正門",
+      "departureTime": "07:25",
+      "arrivalTime": "07:30",
+      "duration": 5,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B8%A1%E6%9C%88%E6%A9%8B&destination=%E5%A4%A9%E9%BE%8D%E5%AF%BA+%E6%AD%A3%E9%96%80&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-jojakko-walk",
+      "scheduleId": "to-jojakko",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "竹林の小径",
+      "arrival": "常寂光寺",
+      "departureTime": "08:45",
+      "arrivalTime": "09:00",
+      "duration": 15,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E7%AB%B9%E6%9E%97%E3%81%AE%E5%B0%8F%E5%BE%84&destination=%E5%B8%B8%E5%AF%82%E5%85%89%E5%AF%BA&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-lunch-walk",
+      "scheduleId": "to-lunch",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "常寂光寺",
+      "arrival": "とうふと湯葉 松ヶ枝",
+      "departureTime": "10:00",
+      "arrivalTime": "10:30",
+      "duration": 30,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%B8%B8%E5%AF%82%E5%85%89%E5%AF%BA&destination=%E3%81%A8%E3%81%86%E3%81%B5%E3%81%A8%E6%B9%AF%E8%91%89+%E6%9D%BE%E3%83%B6%E6%9E%9D&travelmode=walking",
+      "links": [
+        {
+          "label": "亀山公園・桂川沿い経由",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=%E5%B8%B8%E5%AF%82%E5%85%89%E5%AF%BA&destination=%E3%81%A8%E3%81%86%E3%81%B5%E3%81%A8%E6%B9%AF%E8%91%89+%E6%9D%BE%E3%83%B6%E6%9E%9D&travelmode=walking&waypoints=%E5%BE%A1%E9%AB%AA%E7%A5%9E%E7%A4%BE%7C%E5%B5%90%E5%B1%B1%E5%85%AC%E5%9C%92%E4%BA%80%E5%B1%B1%E5%9C%B0%E5%8C%BA"
+        }
+      ],
+      "timetable": [],
+      "note": "余裕があれば御髪神社・亀山公園経由。予約時間優先。"
+    },
+    {
+      "id": "to-randen-walk",
+      "scheduleId": "to-randen",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "嵐山商店街",
+      "arrival": "嵐電嵐山駅",
+      "departureTime": "11:55",
+      "arrivalTime": "12:03",
+      "duration": 8,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%B5%90%E5%B1%B1%E5%95%86%E5%BA%97%E8%A1%97&destination=%E5%B5%90%E9%9B%BB%E5%B5%90%E5%B1%B1%E9%A7%85&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "randen",
+      "scheduleId": "to-keage",
+      "sortOrder": 10,
+      "transportType": "train",
+      "departure": "嵐電嵐山駅",
+      "arrival": "嵐電天神川駅",
+      "departureTime": "12:03",
+      "arrivalTime": "12:16",
+      "duration": 13,
+      "operator": "京福電鉄",
+      "lineName": "嵐山本線",
+      "direction": "四条大宮行",
+      "fare": 250,
+      "timetable": [
+        {
+          "departureTime": "11:43",
+          "arrivalTime": "11:56",
+          "serviceType": null,
+          "note": "地下鉄12:07発 → 蹴上12:22着"
+        },
+        {
+          "departureTime": "11:53",
+          "arrivalTime": "12:06",
+          "serviceType": null,
+          "note": "地下鉄12:15発 → 蹴上12:30着"
+        },
+        {
+          "departureTime": "12:03",
+          "arrivalTime": "12:16",
+          "serviceType": null,
+          "note": "地下鉄12:22発 → 蹴上12:37着"
+        },
+        {
+          "departureTime": "12:13",
+          "arrivalTime": "12:26",
+          "serviceType": null,
+          "note": "地下鉄12:37発 → 蹴上12:52着"
+        },
+        {
+          "departureTime": "12:23",
+          "arrivalTime": "12:36",
+          "serviceType": null,
+          "note": "地下鉄12:45発 → 蹴上13:00着"
+        },
+        {
+          "departureTime": "12:33",
+          "arrivalTime": "12:46",
+          "serviceType": null,
+          "note": "地下鉄12:52発 → 蹴上13:07着"
+        },
+        {
+          "departureTime": "12:43",
+          "arrivalTime": "12:56",
+          "serviceType": null,
+          "note": "地下鉄13:07発 → 蹴上13:22着"
+        },
+        {
+          "departureTime": "12:53",
+          "arrivalTime": "13:06",
+          "serviceType": null,
+          "note": "地下鉄13:15発 → 蹴上13:30着"
+        }
+      ],
+      "links": [
+        {
+          "label": "嵐電公式",
+          "url": "https://www.keifuku.co.jp/randen/"
+        }
+      ],
+      "note": null,
+      "serviceType": null
+    },
+    {
+      "id": "transfer",
+      "scheduleId": "to-keage",
+      "sortOrder": 20,
+      "transportType": "walk",
+      "departure": "嵐電天神川駅",
+      "arrival": "太秦天神川駅",
+      "departureTime": "12:16",
+      "arrivalTime": "12:22",
+      "duration": 6,
+      "operator": null,
+      "lineName": null,
+      "direction": null,
+      "fare": 0,
+      "timetable": [],
+      "links": [],
+      "note": "徒歩乗換・混雑時は次便",
+      "serviceType": null
+    },
+    {
+      "id": "subway",
+      "scheduleId": "to-keage",
+      "sortOrder": 30,
+      "transportType": "subway",
+      "departure": "太秦天神川駅",
+      "arrival": "蹴上駅",
+      "departureTime": "12:22",
+      "arrivalTime": "12:37",
+      "duration": 15,
+      "operator": "京都市営地下鉄",
+      "lineName": "東西線",
+      "direction": "六地蔵方面",
+      "fare": 260,
+      "timetable": [
+        {
+          "departureTime": "12:07",
+          "arrivalTime": "12:22",
+          "serviceType": null,
+          "note": "嵐山11:43発からの接続"
+        },
+        {
+          "departureTime": "12:15",
+          "arrivalTime": "12:30",
+          "serviceType": null,
+          "note": "嵐山11:53発からの接続"
+        },
+        {
+          "departureTime": "12:22",
+          "arrivalTime": "12:37",
+          "serviceType": null,
+          "note": "嵐山12:03発からの接続"
+        },
+        {
+          "departureTime": "12:37",
+          "arrivalTime": "12:52",
+          "serviceType": null,
+          "note": "嵐山12:13発からの接続"
+        },
+        {
+          "departureTime": "12:45",
+          "arrivalTime": "13:00",
+          "serviceType": null,
+          "note": "嵐山12:23発からの接続"
+        },
+        {
+          "departureTime": "12:52",
+          "arrivalTime": "13:07",
+          "serviceType": null,
+          "note": "嵐山12:33発からの接続"
+        },
+        {
+          "departureTime": "13:07",
+          "arrivalTime": "13:22",
+          "serviceType": null,
+          "note": "嵐山12:43発からの接続"
+        },
+        {
+          "departureTime": "13:15",
+          "arrivalTime": "13:30",
+          "serviceType": null,
+          "note": "嵐山12:53発からの接続"
+        }
+      ],
+      "links": [],
+      "note": "1番出口へ",
+      "serviceType": null
+    },
+    {
+      "id": "to-eikando-walk",
+      "scheduleId": "to-eikando",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "蹴上駅 1番出口",
+      "arrival": "永観堂",
+      "departureTime": "12:37",
+      "arrivalTime": "13:00",
+      "duration": 23,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E8%B9%B4%E4%B8%8A%E9%A7%85+1%E7%95%AA%E5%87%BA%E5%8F%A3&destination=%E6%B0%B8%E8%A6%B3%E5%A0%82&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-nanzen-walk",
+      "scheduleId": "to-nanzen",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "永観堂",
+      "arrival": "南禅寺",
+      "departureTime": "14:10",
+      "arrivalTime": "14:20",
+      "duration": 10,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B0%B8%E8%A6%B3%E5%A0%82&destination=%E5%8D%97%E7%A6%85%E5%AF%BA&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-higashiyama-walk",
+      "scheduleId": "to-higashiyama",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "南禅寺",
+      "arrival": "二寧坂",
+      "departureTime": "15:00",
+      "arrivalTime": "15:40",
+      "duration": 40,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%8D%97%E7%A6%85%E5%AF%BA&destination=%E4%BA%8C%E5%AF%A7%E5%9D%82&travelmode=walking&waypoints=%E9%9D%92%E8%93%AE%E9%99%A2%7C%E7%9F%A5%E6%81%A9%E9%99%A2%7C%E5%86%86%E5%B1%B1%E5%85%AC%E5%9C%92%7C%E3%81%AD%E3%81%AD%E3%81%AE%E9%81%93",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-kiyomizu-walk",
+      "scheduleId": "to-kiyomizu",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "二寧坂",
+      "arrival": "清水寺",
+      "departureTime": "17:00",
+      "arrivalTime": "17:30",
+      "duration": 30,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E4%BA%8C%E5%AF%A7%E5%9D%82&destination=%E6%B8%85%E6%B0%B4%E5%AF%BA&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-dinner-walk",
+      "scheduleId": "to-dinner",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "清水寺",
+      "arrival": "いろはかるた 木屋町本店",
+      "departureTime": "18:40",
+      "arrivalTime": "19:30",
+      "duration": 50,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E6%B8%85%E6%B0%B4%E5%AF%BA&destination=%E3%81%84%E3%82%8D%E3%81%AF%E3%81%8B%E3%82%8B%E3%81%9F+%E6%9C%A8%E5%B1%8B%E7%94%BA%E6%9C%AC%E5%BA%97&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "to-station-walk",
+      "scheduleId": "to-station",
+      "sortOrder": 10,
+      "transportType": "walk",
+      "departure": "いろはかるた 木屋町本店",
+      "arrival": "京都河原町駅",
+      "departureTime": "20:50",
+      "arrivalTime": "21:08",
+      "duration": 18,
+      "fare": 0,
+      "routeUrl": "https://www.google.com/maps/dir/?api=1&origin=%E3%81%84%E3%82%8D%E3%81%AF%E3%81%8B%E3%82%8B%E3%81%9F+%E6%9C%A8%E5%B1%8B%E7%94%BA%E6%9C%AC%E5%BA%97&destination=%E4%BA%AC%E9%83%BD%E6%B2%B3%E5%8E%9F%E7%94%BA%E9%A7%85&travelmode=walking",
+      "links": [],
+      "timetable": [],
+      "note": null
+    },
+    {
+      "id": "return-train",
+      "scheduleId": "to-osaka",
+      "sortOrder": 10,
+      "transportType": "train",
+      "departure": "京都河原町駅",
+      "arrival": "大阪梅田駅",
+      "departureTime": "21:08",
+      "arrivalTime": "21:54",
+      "duration": 46,
+      "operator": "阪急電鉄",
+      "lineName": "京都線",
+      "direction": "大阪梅田行",
+      "fare": null,
+      "timetable": [
+        {
+          "departureTime": "20:35",
+          "arrivalTime": "21:22",
+          "serviceType": "準特急",
+          "note": null
+        },
+        {
+          "departureTime": "20:45",
+          "arrivalTime": "21:34",
+          "serviceType": "準特急",
+          "note": null
+        },
+        {
+          "departureTime": "20:56",
+          "arrivalTime": "21:42",
+          "serviceType": "準特急",
+          "note": null
+        },
+        {
+          "departureTime": "21:08",
+          "arrivalTime": "21:54",
+          "serviceType": "準特急",
+          "note": null
+        },
+        {
+          "departureTime": "21:22",
+          "arrivalTime": "22:06",
+          "serviceType": "準特急",
+          "note": null
+        },
+        {
+          "departureTime": "21:33",
+          "arrivalTime": null,
+          "serviceType": "準特急",
+          "note": null
+        }
+      ],
+      "links": [
+        {
+          "label": "阪急公式時刻表",
+          "url": "https://www.hankyu.co.jp/station/html/HK-86_ky_1_w.html"
+        }
+      ],
+      "note": "到着時刻は会話内の予定表。運行状況を当日確認。",
+      "serviceType": "準特急"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "lunch-reservation",
+      "title": "松ヶ枝 昼食",
+      "type": "restaurant",
+      "scheduleId": "lunch",
+      "spotId": "matsugae",
+      "date": "2026-11-26",
+      "reservationTime": "10:30",
+      "links": [],
+      "note": "2名・予約済"
+    },
+    {
+      "id": "dinner-reservation",
+      "title": "いろはかるた 夕食",
+      "type": "restaurant",
+      "scheduleId": "dinner",
+      "spotId": "iroha",
+      "date": "2026-11-26",
+      "reservationTime": "19:30",
+      "links": [],
+      "note": "2名・予約済"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-010",
+      "title": "時間調整",
+      "content": "予約は10:30と19:30。永観堂を優先、南禅寺は時間に応じて調整。電車は通常ダイヤの予定・当日確認。"
+    },
+    {
+      "id": "note-020",
+      "title": "帰宅目標",
+      "content": "21時前後に京都を出発、22:30頃帰宅目標。"
+    }
+  ]
+}

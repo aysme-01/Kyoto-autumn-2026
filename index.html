@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <meta name="theme-color" content="#8B3445" />
+    <title>AYtabi｜秋の京都</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap"
+    />
+    <!-- 自作CSS -->
+    <link rel="stylesheet" href="css/common.css?v=20261125-2215" />
+    <link rel="stylesheet" href="css/home.css?v=20261125-2215" />
+    <link rel="stylesheet" href="css/schedule.css?v=20261125-2215" />
+    <link rel="stylesheet" href="css/spots.css?v=20261125-2215" />
+    <link rel="stylesheet" href="css/refinement.css?v=20261125-2216" />
+  </head>
+
+  <body>
+    <!-- ヘッダー-->
+    <header class="site-header">
+      <div class="container d-flex align-items-center gap-2">
+        <!-- 日付 -->
+        <div class="header-date">
+          <span id="header-date"></span>
+          <span id="header-day" class="header-date__day"></span>
+        </div>
+
+        <!-- 予約リスト -->
+        <div id="header-reservations" class="dropdown ms-auto">
+          <!-- 予約リストボタン -->
+          <button
+            class="reservation-btn cta"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="bi bi-calendar-check" aria-hidden="true"></i><span>予約一覧</span>
+            <i class="bi bi-chevron-down reservation-arrow-down"></i>
+          </button>
+
+          <!-- 予約リストドロップダウン -->
+          <div id="reservation-list" class="dropdown-menu dropdown-menu-end reservation-dropdown">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main id="app-content">
+      <!-- 各画面のHTMLをここに読み込む -->
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <nav class="footer-nav">
+        <a href="#home" class="footer-link active" data-page="home">
+          <span class="footer-icon">
+            <i class="bi bi-house"></i>
+          </span>
+          <span>ホーム</span>
+        </a>
+
+        <a href="#schedule" class="footer-link" data-page="schedule">
+          <span class="footer-icon">
+            <i class="bi bi-clock"></i>
+          </span>
+          <span>スケジュール</span>
+        </a>
+
+        <a href="#spots" class="footer-link" data-page="spots">
+          <span class="footer-icon">
+            <i class="bi bi-geo-alt"></i>
+          </span>
+          <span>スポット</span>
+        </a>
+      </nav>
+    </footer>
+
+    <!-- ==================================================
+     スポット詳細モーダル
+================================================== -->
+
+<div class="modal fade"
+     id="spot-detail-modal"
+     tabindex="-1"
+     aria-labelledby="spot-detail-modal-title"
+     aria-hidden="true">
+
+    <div class="modal-dialog
+                modal-dialog-centered
+                modal-dialog-scrollable">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 class="modal-title"
+                    id="spot-detail-modal-title">
+
+                    <i class="bi bi-geo-alt"></i>
+                    スポット詳細
+
+                </h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="閉じる">
+                </button>
+
+            </div>
+
+            <div class="modal-body"
+                 id="spot-detail-content">
+
+                <!-- JavaScriptで描画 -->
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="trip-modal-close"
+                        data-bs-dismiss="modal">
+
+                    閉じる
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     時刻表モーダル
+================================================== -->
+
+<div class="modal fade"
+     id="timetable-modal"
+     tabindex="-1"
+     aria-labelledby="timetable-modal-title"
+     aria-hidden="true">
+
+    <div class="modal-dialog
+                modal-dialog-centered
+                modal-dialog-scrollable">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 class="modal-title"
+                    id="timetable-modal-title">
+
+                    <i class="bi bi-clock"></i>
+                    時刻表
+
+                </h2>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="閉じる">
+                </button>
+
+            </div>
+
+            <div class="modal-body"
+                 id="timetable-content">
+
+                <!-- JavaScriptで描画 -->
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="trip-modal-close"
+                        data-bs-dismiss="modal">
+
+                    閉じる
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 自作JS -->
+    <!-- 共通処理 -->
+    <script src="./js/core/utils.js?v=20261125-2215"></script>
+    <script src="./js/core/data.js?v=20261125-2215"></script>
+    <script src="./js/core/router.js?v=20261125-2215"></script>
+
+    <!-- 共通コンポーネント -->
+    <script src="./js/components/header.js?v=20261125-2215"></script>
+    <script src="./js/components/navigation.js?v=20261125-2215"></script>
+    <script src="./js/components/menu.js?v=20261125-2215"></script>
+    <script src="./js/components/spot-detail.js?v=20261125-2215"></script>
+    <script src="./js/components/timetable.js?v=20261125-2215"></script>
+    <script src="./js/components/schedule-detail.js?v=20261125-2215"></script>
+
+    <!-- 各画面 -->
+    <script src="./js/pages/home.js?v=20261125-2215-photo2"></script>
+    <script src="./js/pages/schedule.js?v=20261125-2215"></script>
+    <script src="./js/pages/spots.js?v=20261125-2215"></script>
+
+    <!-- アプリケーション初期化 -->
+    <script src="./js/app.js?v=20261125-2215"></script>
+  </body>
+</html>

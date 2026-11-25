@@ -1,0 +1,194 @@
+
+<!-- ヒーロー・天気 -->
+<section class="home-hero">
+    <img src="assets/images/kyoto-hero2.png"
+         class="home-hero-image"
+         alt="秋の京都">
+
+    <div class="weather-circle-area">
+        <div class="weather-circle">
+            <div class="weather-circle__item">
+                <span class="weather-circle__label"
+                      id="home-weather-label">予報取得中</span>
+                <div class="weather-circle__value">
+                    <i class="bi bi-cloud-sun"></i>
+                    <span id="home-weather-temperature">—</span>
+                </div>
+            </div>
+
+            <span class="weather-circle__divider"></span>
+
+            <div class="weather-circle__item">
+                <span class="weather-circle__label">日の入り</span>
+                <div class="weather-circle__value">
+                    <i class="bi bi-sunset"></i>
+                    <span id="home-sunset">—</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trip-progress">
+
+    <div class="location-cards">
+
+        <!-- NOWカード -->
+        <article class="location-card location-card-now">
+
+            <div class="home-now-heading">
+                <span class="location-card-label"
+                      id="home-current-label">いまの予定</span>
+            </div>
+
+            <div class="home-now-main">
+
+                <div class="home-now-icon">
+                    <i id="home-current-icon"></i>
+                </div>
+
+                <div class="home-now-text">
+
+                    <span id="home-current-category"
+                          class="home-category"></span>
+
+                    <button type="button"
+                            class="home-current-detail"
+                            data-home-current-detail>
+                        <h2 id="home-current"></h2>
+                    </button>
+
+                    <p id="home-current-description"></p>
+
+                </div>
+
+                <button type="button"
+                        class="home-now-photo"
+                        id="home-current-photo">
+
+                    <img id="home-current-image"
+                         alt="" hidden>
+
+                    <span class="home-photo-placeholder">
+                        <i></i>
+                        <span>KYOTO</span>
+                    </span>
+
+                </button>
+
+            </div>
+
+            <!-- 時間・カウントダウン -->
+            <div class="home-now-info">
+
+                <div class="home-now-time">
+                    <i class="bi bi-clock"></i>
+                    <span id="home-current-time"></span>
+                    <span id="home-current-duration"></span>
+                </div>
+
+                <div class="home-now-countdown">
+                    <i class="bi bi-clock"></i>
+                    <span id="home-timing-label"></span>
+                    <strong id="home-timing"></strong>
+                </div>
+
+            </div>
+
+            <!-- 補足情報 -->
+            <div class="home-now-note" id="home-note-row" hidden>
+                <i class="bi bi-pencil-square"></i>
+                
+                <span id="home-current-note"></span>
+            </div>
+
+            <!-- 前後切り替え -->
+            <div class="home-controls">
+
+                <button type="button" data-home-step="-1">
+                    <i class="bi bi-chevron-left"></i>
+                    前の予定
+                </button>
+
+                <button type="button" data-home-auto>
+                    <i class="bi bi-arrow-repeat"></i>
+                    自動に戻す
+                </button>
+
+                <button type="button" data-home-step="1">
+                    次の予定
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </article>
+
+        <!-- クイックボタン・NEXTカード -->
+        <div class="home-next-row">
+
+            <div class="home-quick-actions">
+
+                <button type="button"
+                        class="home-quick-button"
+                        data-home-notes>
+                    <i class="bi bi-journal-text"></i>
+                    <span>旅のメモ</span>
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
+            </div>
+
+            <button type="button"
+                    class="location-card location-card-next"
+                    data-home-next-detail>
+
+                <span class="location-card-label">
+                    つぎの予定
+                </span>
+
+                <div class="next-card-content">
+                    <i id="home-next-icon"></i>
+                    <h3 id="home-next"></h3>
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+
+                <div class="home-next-info">
+                    <i class="bi bi-clock"></i>
+                    <span id="home-next-time"></span>
+                    <span id="home-next-duration"></span>
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- 今日の道のり -->
+    <section class="today-flow" aria-label="今日の道のり">
+
+        <svg class="today-route" viewBox="0 0 360 64" role="img" aria-label="今日の道のり"><path class="route-path" d=""></path></svg>
+
+    </section>
+
+</section>
+
+<!-- 旅のメモ -->
+<section id="home-notes-section" class="home-notes-section">
+
+    <h2>
+        <i class="bi bi-journal-text"></i>
+        旅のメモ
+    </h2>
+
+    <div id="home-notes"></div>
+
+    <p class="home-weather-source">
+        天気予報：
+        <a href="https://open-meteo.com/"
+           target="_blank"
+           rel="noopener noreferrer">Open-Meteo</a>
+    </p>
+
+</section>

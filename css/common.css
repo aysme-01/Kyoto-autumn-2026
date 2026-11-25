@@ -1,0 +1,371 @@
+
+/* ========================================
+   サイト全体の基本設定
+======================================== */
+
+/* 基本は読みやすいゴシック体 */
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/* 背景 */
+body {
+    background-color: #ffffff;
+
+    background-image:
+     linear-gradient(
+        rgba(255, 255, 255, 0.65),
+        rgba(255, 255, 255, 0.65)
+    ),
+
+        /* 和紙画像 */
+        url("../assets/patterns/washi02.png");
+
+
+    /* パターンを繰り返す */
+    background-repeat: repeat;
+
+    /* 画像の縦横比を維持 */
+    background-size: auto, 600px auto;
+}
+
+
+/* ========================================
+   共通ヘッダー
+======================================== */
+
+.site-header {
+    background-color: #8B3445;
+    border: none;
+}
+
+/* ヘッダーの日付 */
+.header-date {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    font-family: "Shippori", serif;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: #e5e3e0;
+}
+
+.header-date__day {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+}
+
+
+/* ----------------------------------------
+   予約一覧ボタン
+---------------------------------------- */
+
+/* 予約リストボタン */
+.reservation-btn.cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    padding: 15px 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+/* 左側の丸い背景 */
+.reservation-btn.cta::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+
+    background: #FAF1E3;
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+}
+
+/* ボタンの文字 */
+.reservation-btn.cta span {
+    position: relative;
+    z-index: 1;
+
+    font-family: "Shippori", serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #8B3445;
+}
+
+/* 矢印 */
+.reservation-arrow-down {
+    position: relative;
+    z-index: 1;
+    margin-left: 8px;
+    font-size: 14px;
+    color: #8B3445;
+    transition: transform 0.3s ease;
+}
+
+.reservation-btn.cta[aria-expanded="true"] .reservation-arrow-down {
+    transform: rotate(180deg);
+}
+
+/* ホバー時 */
+.reservation-btn.cta:hover::before {
+    width: 100%;
+    background: #FAF1E3;
+}
+
+.reservation-btn.cta:hover svg {
+    transform: translateX(0);
+}
+
+/* 押したとき */
+.reservation-btn.cta:active {
+    transform: scale(0.95);
+}
+
+/* キーボード操作 */
+.reservation-btn.cta:focus-visible {
+    outline: 2px solid #8B3445;
+    outline-offset: 3px;
+}
+
+.reservation-btn.cta[aria-expanded="true"]::before {
+    width: 100%;
+}
+
+.reservation-btn.cta[aria-expanded="true"] svg {
+    transform: translateX(0);
+}
+
+/* ========================================
+   予約一覧ドロップダウン
+======================================== */
+
+/* 予約なしメッセージ */
+.reservation-empty {
+    padding: 16px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #873446;
+}
+
+.reservation-dropdown {
+    width: 300px;
+    max-width: calc(100vw - 24px);
+    padding: 8px 16px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DDD2C8;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.reservation-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.reservation-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F0EE;
+    border-radius: 8px;
+    color: #8B3445;
+    font-size: 20px;
+}
+
+.reservation-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.reservation-link + .reservation-link {
+    border-top: 1px solid #E8DFD7;
+}
+
+.reservation-name {
+    font-family: "Shippori", serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #8B3445;
+}
+.reservation-facility {
+    font-family: "Shippori", serif;
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+.reservation-date {
+    font-family: "Shippori", serif;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #777;
+}
+.reservation-arrow {
+    flex-shrink: 0;
+    color: #8B3445;
+}
+.reservation-link > i {
+    font-size: 18px;
+    color: #8B3445;
+    flex-shrink: 0;
+}
+
+.reservation-link:hover {
+    background-color: #FAF7F4;
+}
+
+/* ========================================
+   共通フッター
+======================================== */
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    background-color: #8B3445;
+    background-image:
+        url("../assets/images/footer-deco-left.png"),
+        url("../assets/images/footer-deco-right.png");
+
+    background-position:
+        left top,
+        right bottom;
+
+    background-size:
+        100px auto,
+        100px auto;
+
+    background-repeat: no-repeat;
+
+    padding: 10px 0 12px;
+    overflow: hidden;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    z-index: 1;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    color: #FFF4EC;
+    text-decoration: none;
+    font-family: "Shippori", serif;
+    font-size: 12px;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+
+    color: #FFF4EC;
+    transition: all .25s ease;
+}
+
+/* 選択中のアイコン */
+.footer-link.active .footer-icon {
+    background: #FAF1E3;
+    color: #873446;
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 0 0 3px #FAF1E3,
+        inset 0 0 0 4px #C9A06D,
+        0 0 0 2px #8B3445,
+        0 0 0 3px #E7C58E;
+}
+
+/* ホバー */
+.footer-link:hover {
+    color: #FFF4EC;
+}
+
+.footer-link:focus-visible {
+    outline: 2px solid #FFF4EC;
+    outline-offset: -3px;
+    border-radius: 8px;
+}
+
+/* ========================================
+   フォント定義
+======================================== */
+/* はんなり明朝 */
+@font-face {
+    font-family: "Hannari";
+    src: url("../assets/fonts/HannariMincho-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* こころ明朝 */
+@font-face {
+    font-family: "Kokoro";
+    src: url("../assets/fonts/Kokoro.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* しっぽり明朝 */
+@font-face {
+    font-family: "Shippori";
+    src: url("../assets/fonts/ShipporiMincho-OTF-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Shippori";
+    src: url("../assets/fonts/ShipporiMincho-OTF-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Shippori";
+    src: url("../assets/fonts/ShipporiMincho-OTF-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+

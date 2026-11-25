@@ -1,0 +1,1981 @@
+/* ==================================================
+   01. スケジュール画面全体
+================================================== */
+
+.schedule-page {
+    padding: 24px 16px;
+}
+
+
+/* ==================================================
+   02. 日付ヘッダー
+================================================== */
+
+/* 日付ヘッダー全体 */
+.schedule-date-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 30px;
+    margin-bottom: 16px;
+}
+
+/* 日付スタンプ */
+.schedule-date-stamp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid #8B3445;
+    border-radius: 50%;
+
+    font-family: "Shippori", serif;
+    color: #873446;
+}
+
+/* スタンプの内側の円 */
+.schedule-date-stamp::before {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid #8B3445;
+    border-radius: 50%;
+}
+
+/* 日付 */
+#schedule-date {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* 曜日 */
+#schedule-day {
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+/* 見出し */
+.schedule-date-title {
+    font-family: "Shippori", serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #873446;
+}
+
+/* 英字サブタイトル */
+.schedule-date-subtitle {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #A38A74;
+    margin-top: 4px;
+}
+
+
+/* ==================================================
+   03. スケジュール項目・レイアウト
+================================================== */
+
+/* 時刻・タイムライン・カードの3列構成 */
+.schedule-item {
+    display: grid;
+    grid-template-columns: 48px 24px minmax(0, 1fr);
+}
+
+
+/* ==================================================
+   04. 開始・終了時刻
+================================================== */
+
+/* 時刻表示領域 */
+.schedule-time {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    padding-top: 14px;
+    color: #873446;
+    white-space: nowrap;
+}
+
+/* 開始時刻 */
+.schedule-start {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 終了時刻 */
+.schedule-end {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+
+/* ==================================================
+   05. タイムライン
+================================================== */
+
+/* タイムライン表示領域 */
+.schedule-marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 21px;
+}
+
+/* タイムラインの縦線 */
+.schedule-marker::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #C9C4B5;
+}
+
+/* タイムラインの丸いマーカー */
+.schedule-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8B3445;
+}
+
+
+/* ==================================================
+   06. スケジュールカード
+================================================== */
+
+/* カード本体 */
+.schedule-card {
+    position: relative;
+    isolation: isolate;
+
+    /* 上・右・下・左 */
+    margin: 0 6px 24px 20px;
+
+    /* 上・右・下・左 */
+    padding: 16px 12px 16px 26px;
+
+    background: transparent;
+}
+
+/* 背面の紙 */
+.schedule-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(5px, 5px);
+    background: rgba(193, 200, 167, 0.35);
+    z-index: -2;
+}
+
+/* 前面の紙 */
+.schedule-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #FCF3E0;
+    z-index: -1;
+}
+
+/* カードの常時表示部分 */
+.schedule-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* タイトル・説明の表示領域 */
+.schedule-heading {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 開閉アイコン */
+.schedule-toggle {
+    flex-shrink: 0;
+    font-size: 12px;
+    color: #998B78;
+}
+
+
+/* ==================================================
+   07. タイトル・サブタイトル・所要時間
+================================================== */
+
+/* タイトルと所要時間の横並び */
+.schedule-title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+/* スケジュールタイトル */
+.schedule-title {
+    font-family: "Shippori", serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #873446;
+    line-height: 1.5;
+}
+
+/* サブタイトル */
+.schedule-description {
+    font-size: 12px;
+    color: #8F7863;
+    line-height: 1.6;
+    margin-top: 2px;
+}
+
+/* サブタイトルがない場合 */
+.schedule-description:empty {
+    display: none;
+}
+
+/* 所要時間タグ */
+.schedule-duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #65754A;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   08. カテゴリアイコン
+================================================== */
+
+/* 丸いカテゴリアイコン */
+.schedule-category {
+    position: absolute;
+    top: 10px;
+    left: -16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+    background: #8B3445;
+    color: #FFF4EC;
+    font-size: 16px;
+}
+
+/* 紅葉アイコン */
+.icon-maple {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+
+    background-color: currentColor;
+
+    mask-image: url("../assets/icons/maple.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+
+/* ==================================================
+   09. 移動カード
+================================================== */
+
+/* 移動カード本体 */
+.is-transport .schedule-card {
+    margin-left: 26px;
+    padding: 10px 12px 10px 22px;
+
+    background: transparent;
+    border: 1px dashed #A6A68B;
+}
+
+/* 紙の重なりを解除 */
+.is-transport .schedule-card::before,
+.is-transport .schedule-card::after {
+    display: none;
+}
+
+/* 移動カードのタイトル */
+.is-transport .schedule-title {
+    font-size: 13px;
+    color: #65754A;
+}
+
+/* 移動カードのカテゴリアイコン */
+.is-transport .schedule-category {
+    top: 8px;
+    left: -14px;
+
+    width: 28px;
+    height: 28px;
+
+    background: #E2E5D5;
+    color: #65754A;
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   10. スクラップ風の写真
+================================================== */
+
+/* 写真の白い台紙 */
+.schedule-photo {
+    position: relative;
+    flex-shrink: 0;
+
+    width: 64px;
+    padding: 3px 3px 9px;
+
+    background: #FFFCF6;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.12);
+
+    transform: rotate(5deg);
+}
+
+/* 写真本体 */
+.schedule-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* マスキングテープ */
+.schedule-photo::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+
+    width: 32px;
+    height: 12px;
+
+    background: rgba(185, 159, 112, .48);
+    transform: translateX(-50%) rotate(-8deg);
+
+    z-index: 1;
+}
+/* ==================================================
+   11. スケジュールの進捗状態
+================================================== */
+
+/* --------------------------------------------------
+   終了済み
+-------------------------------------------------- */
+
+/* タイムライン：濃い実線 */
+.is-completed .schedule-marker::before {
+    width: 2px;
+    background: #65754A;
+}
+
+/* マーカー：塗りつぶした丸 */
+.is-completed .schedule-dot {
+    background: #65754A;
+}
+
+/* 時刻 */
+.is-completed .schedule-time {
+    color: #65754A;
+}
+
+
+/* --------------------------------------------------
+   今後の予定
+-------------------------------------------------- */
+
+/* タイムライン：点線 */
+.is-upcoming .schedule-marker::before {
+    width: 0;
+    background: none;
+    border-left: 1px dashed #B6AD97;
+}
+
+/* マーカー：中抜きの丸 */
+.is-upcoming .schedule-dot {
+    background: #FCF7F0;
+    border: 1px solid #B6AD97;
+}
+
+
+/* --------------------------------------------------
+   現在の予定
+-------------------------------------------------- */
+
+/* タイムライン：点線 */
+.is-current .schedule-marker::before {
+    width: 0;
+    background: none;
+    border-left: 1px dashed #B6AD97;
+}
+
+/* 現在のマーカーまでを実線にする */
+.is-current .schedule-marker::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 25px;
+    background: #65754A;
+    transform: translateX(-50%);
+}
+
+/* マーカー：現在の予定 */
+.is-current .schedule-dot {
+    width: 12px;
+    height: 12px;
+    margin-top: -2px;
+    border-radius: 50%;
+    background: #8B3445;
+    z-index: 1;
+}
+
+/* 前面の紙 */
+.is-current .schedule-card::after {
+    background: #F1D9D6;
+}
+
+/* 背面の紙 */
+.is-current .schedule-card::before {
+    background: #D3B2AD;
+}
+
+/* 所要時間タグ */
+.is-current .schedule-duration {
+    color: #873446;
+}
+
+/* 現在の予定が移動の場合 */
+.is-current.is-transport .schedule-card {
+    background: #F1D9D6;
+    border-color: #8B3445;
+}
+/* ==================================================
+   12. スケジュールカードの開閉
+================================================== */
+
+/* クリック可能なヘッダー */
+.schedule-card-header {
+    cursor: pointer;
+}
+
+/* 詳細部分：初期状態は非表示 */
+.schedule-card-body {
+    display: none;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(143, 120, 99, 0.25);
+}
+
+/* 詳細部分：展開時 */
+.schedule-card.is-open .schedule-card-body {
+    display: block;
+}
+
+/* 開閉アイコンのアニメーション */
+.schedule-toggle {
+    transition: transform 0.25s ease;
+}
+
+/* 展開時は矢印を反転 */
+.schedule-card.is-open .schedule-toggle {
+    transform: rotate(180deg);
+}
+
+/* ==================================================
+   13. スケジュール詳細・スポット一覧
+================================================== */
+
+/* スポット一覧全体 */
+.schedule-spot-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* スポット1件分 */
+.schedule-spot-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(143, 120, 99, 0.2);
+}
+
+/* 最後のスポットは区切り線なし */
+.schedule-spot-item:last-child {
+    border-bottom: none;
+}
+
+/* スポット種別アイコン */
+.schedule-spot-icon {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #873446;
+}
+
+/* スポット名 */
+.schedule-spot-name {
+    flex: 1;
+    min-width: 0;
+
+    font-family: "Shippori", serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #873446;
+}
+
+/* 地図ボタン */
+.schedule-spot-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-shrink: 0;
+
+    padding: 4px 8px;
+    border: 1px solid #B6BBA5;
+    border-radius: 5px;
+
+    color: #65754A;
+    font-size: 11px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* 詳細画面への矢印 */
+.schedule-spot-arrow {
+    flex-shrink: 0;
+    font-size: 11px;
+    color: #998B78;
+}
+/* スポット情報の表示領域 */
+.schedule-spot-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* スポット情報タグの表示領域 */
+.schedule-spot-tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+/* タグの共通スタイル */
+.schedule-spot-tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 5px;
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* 営業時間・料金タグ */
+.tag-hours,
+.tag-fee {
+    color: #65754A;
+}
+
+/* 最終受付タグ */
+.tag-admission {
+    color: #796A5C;
+}
+
+/* 予約時間タグ（後で使用） */
+.tag-reservation {
+    color: #873446;
+    font-weight: 600;
+}
+
+/* ==================================================
+   14. スケジュールカードの追加スタイル
+================================================== */
+
+/* 詳細情報がないカード */
+.schedule-card-header.has-no-detail {
+    cursor: default;
+}
+
+/* 予約時間の強調表示 */
+.tag-reservation-main {
+    color: #873446;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 空のタグ領域 */
+.schedule-spot-tags:empty {
+    display: none;
+}
+
+/* キーボード操作時のフォーカス */
+.schedule-card-header:focus-visible {
+    outline: 2px solid #8B3445;
+    outline-offset: 4px;
+}
+
+
+/* ==================================================
+   15. スポット一覧の操作ボタン
+================================================== */
+
+/* スポット項目 */
+.schedule-spot-item {
+    cursor: pointer;
+}
+
+/* 操作ボタンの表示領域 */
+.schedule-spot-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+/* 地図・メニューボタン */
+.schedule-spot-map,
+.schedule-spot-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border: 1px solid #B6BBA5;
+    border-radius: 4px;
+    background: transparent;
+
+    color: #65754A;
+    font-size: 11px;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+/* スポット詳細ボタン */
+.schedule-spot-detail-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 24px;
+    min-height: 36px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    color: #998B78;
+}
+
+/* ボタン押下時 */
+.schedule-spot-map:active,
+.schedule-spot-menu:active {
+    background: #E2E5D5;
+    color: #4C5C4E;
+}
+
+
+/* ==================================================
+   16. 移動経路タイムライン
+================================================== */
+
+/* 移動経路一覧 */
+.schedule-route-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 移動経路1件分 */
+.schedule-route-item {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    column-gap: 10px;
+}
+
+/* タイムライン領域 */
+.schedule-route-marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* 経路をつなぐ縦線 */
+.schedule-route-marker::before {
+    content: "";
+    position: absolute;
+
+    top: 12px;
+    bottom: -12px;
+    left: 50%;
+
+    width: 1px;
+    background: #B6BBA5;
+
+    transform: translateX(-50%);
+}
+
+/* 最後の経路は縦線なし */
+.schedule-route-item:last-child
+.schedule-route-marker::before {
+    display: none;
+}
+
+/* 移動手段アイコン */
+.schedule-route-icon {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 26px;
+    height: 26px;
+
+    border-radius: 50%;
+    background: #E2E5D5;
+
+    color: #65754A;
+    font-size: 13px;
+
+    z-index: 1;
+}
+
+/* 移動経路の情報 */
+.schedule-route-info {
+    min-width: 0;
+    padding-bottom: 22px;
+}
+
+/* 最後の経路 */
+.schedule-route-item:last-child
+.schedule-route-info {
+    padding-bottom: 4px;
+}
+
+/* 移動手段名 */
+.schedule-route-type {
+    color: #8F7863;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+/* 出発地・到着地 */
+.schedule-route-title {
+    font-family: "Shippori", serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #4C5C4E;
+
+    overflow-wrap: anywhere;
+}
+
+/* 出発地と到着地の間の矢印 */
+.schedule-route-title i {
+    margin: 0 2px;
+    font-size: 11px;
+    color: #A6A68B;
+}
+
+/* 交通機関・路線名 */
+.schedule-route-line {
+    margin-top: 3px;
+    font-size: 12px;
+    color: #65754A;
+}
+
+/* 方面・乗り場 */
+.schedule-route-direction {
+    margin-top: 2px;
+    font-size: 11px;
+    line-height: 1.6;
+    color: #8F7863;
+}
+
+
+/* ==================================================
+   17. 移動経路の時刻・所要時間
+================================================== */
+
+/* 出発・到着時刻 */
+.schedule-route-time {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    margin-bottom: 4px;
+
+    color: #873446;
+    font-size: 16px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+/* 発・着の文字 */
+.schedule-route-time small {
+    margin-left: 2px;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+/* 時刻の間の矢印 */
+.schedule-route-time > i {
+    font-size: 11px;
+    color: #A38A74;
+}
+
+/* 所要時間・運賃タグの表示領域 */
+.schedule-route-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+/* 所要時間・運賃タグ */
+.schedule-route-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 3px 7px;
+
+    border-radius: 4px;
+    background: #EDE7D5;
+
+    color: #65754A;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   18. 移動経路の操作ボタン
+================================================== */
+
+/* 操作ボタンの表示領域 */
+.schedule-route-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 8px;
+}
+
+/* 時刻表・外部リンクボタン */
+.schedule-route-timetable,
+.schedule-route-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    max-width: 100%;
+    padding: 5px 9px;
+
+    border: 1px solid #A6A68B;
+    border-radius: 4px;
+    background: transparent;
+
+    color: #65754A;
+    font-size: 11px;
+    line-height: 1.5;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+/* 時刻表ボタン */
+.schedule-route-timetable {
+    background: #E2E5D5;
+    font-weight: 500;
+}
+
+/* ボタン押下時 */
+.schedule-route-timetable:active,
+.schedule-route-link:active {
+    background: #D4DBC4;
+    color: #4C5C4E;
+}
+
+/* 移動経路の補足メモ */
+.schedule-route-note {
+    margin-top: 6px;
+
+    color: #8F7863;
+    font-size: 10px;
+    line-height: 1.7;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   19. スケジュールの予約詳細
+================================================== */
+
+/* 予約一覧 */
+.schedule-reservation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 予約情報 */
+.schedule-reservation-detail {
+    padding: 10px;
+
+    border-left: 3px solid #8B3445;
+    background: rgba(225, 213, 188, .45);
+}
+
+/* 予約名 */
+.schedule-reservation-title {
+    color: #873446;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 予約日時 */
+.schedule-reservation-time {
+    margin-top: 4px;
+
+    color: #873446;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 予約の補足情報 */
+.schedule-reservation-note {
+    margin-top: 5px;
+
+    color: #8F7863;
+    font-size: 11px;
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+
+/* ==================================================
+   20. スケジュールの補足メモ
+================================================== */
+
+.schedule-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+
+    margin-top: 10px;
+    padding: 9px 10px;
+
+    border-left: 2px solid #8B3445;
+    background: rgba(225, 213, 188, .35);
+
+    color: #873446;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.schedule-note > i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.schedule-note-text {
+    min-width: 0;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   21. 共通モーダル
+================================================== */
+
+/* モーダル本体 */
+#spot-detail-modal .modal-content,
+#timetable-modal .modal-content {
+    border: 1px solid #D8C9B3;
+    border-radius: 8px;
+    background: #FCF7EC;
+    color: #4C5C4E;
+
+    overflow: hidden;
+}
+
+/* モーダルヘッダー */
+#spot-detail-modal .modal-header,
+#timetable-modal .modal-header {
+    padding: 12px 18px;
+
+    border-bottom: 1px solid #D8C9B3;
+    background: #8B3445;
+    color: #FFF4EC;
+}
+
+/* モーダルタイトル */
+#spot-detail-modal .modal-title,
+#timetable-modal .modal-title {
+    font-family: "Shippori", serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 閉じるボタン */
+#spot-detail-modal .btn-close,
+#timetable-modal .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.9;
+}
+
+/* モーダルの本文 */
+#spot-detail-modal .modal-body,
+#timetable-modal .modal-body {
+    padding: 20px 18px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+/* モーダルフッター */
+#spot-detail-modal .modal-footer,
+#timetable-modal .modal-footer {
+    border-top: 1px solid #D8C9B3;
+    background: #FCF7EC;
+}
+
+/* フッターの閉じるボタン */
+.trip-modal-close {
+    padding: 7px 24px;
+
+    border: 1px solid #8B3445;
+    border-radius: 4px;
+    background: #FAF1E3;
+
+    color: #873446;
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   22. スポット詳細・メイン写真
+================================================== */
+
+/* スポット詳細全体 */
+.spot-detail {
+    min-width: 0;
+}
+
+/* スクラップ風のメイン写真 */
+.spot-detail-photo {
+    position: relative;
+
+    margin: 8px 8px 24px;
+    padding: 6px 6px 18px;
+
+    background: #FFFCF6;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.12);
+
+    transform: rotate(-1deg);
+}
+
+/* マスキングテープ */
+.spot-detail-photo::before {
+    content: "";
+    position: absolute;
+
+    top: -9px;
+    left: 50%;
+
+    width: 76px;
+    height: 22px;
+
+    background: rgba(185, 159, 112, .48);
+
+    transform: translateX(-50%) rotate(-5deg);
+    z-index: 1;
+}
+
+/* メイン写真本体 */
+.spot-detail-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   23. スポット詳細・基本情報
+================================================== */
+
+/* 種別・エリア・所要時間 */
+.spot-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    margin-bottom: 10px;
+}
+
+/* 基本情報タグ */
+.spot-detail-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 4px 8px;
+
+    border-radius: 4px;
+    background: #E2E5D5;
+
+    color: #65754A;
+    font-size: 11px;
+}
+
+/* スポット名の表示領域 */
+.spot-detail-heading {
+    margin-bottom: 16px;
+}
+
+/* 読み仮名 */
+.spot-detail-reading {
+    color: #A38A74;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* スポット名 */
+.spot-detail-name {
+    margin: 3px 0 10px;
+
+    font-family: "Shippori", serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #873446;
+}
+
+/* スポットの説明 */
+.spot-detail-description {
+    color: #796A5C;
+    font-size: 13px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   24. スポット詳細・共通セクション
+================================================== */
+
+/* セクション全体 */
+.spot-detail-section {
+    margin-top: 24px;
+}
+
+/* セクションタイトル */
+.spot-detail-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #D8C9B3;
+
+    font-family: "Shippori", serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #873446;
+}
+
+/* タイトルアイコン */
+.spot-detail-section-title i {
+    font-size: 14px;
+}
+
+/* 補足テキスト */
+.spot-detail-subtext {
+    margin-top: 5px;
+
+    color: #8F7863;
+    font-size: 11px;
+    line-height: 1.7;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   25. スポット詳細・外部リンク
+================================================== */
+
+/* リンク一覧 */
+.spot-detail-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+/* 地図・公式サイト・予約確認ボタン */
+.spot-detail-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    gap: 6px;
+
+    min-width: 0;
+    padding: 9px 12px;
+
+    border: 1px solid #A6A68B;
+    border-radius: 4px;
+    background: transparent;
+
+    color: #65754A;
+    font-size: 12px;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.spot-detail-link:active {
+    background: #E2E5D5;
+    color: #4C5C4E;
+}
+
+
+/* ==================================================
+   26. スポット詳細・予約情報
+================================================== */
+
+.spot-detail-reservation {
+    margin-bottom: 8px;
+    padding: 12px;
+
+    border-left: 3px solid #8B3445;
+    background: #F0DFDB;
+}
+
+.spot-detail-reservation-title {
+    color: #873446;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.spot-detail-reservation-time {
+    margin-top: 5px;
+
+    color: #873446;
+    font-size: 17px;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+
+
+/* ==================================================
+   27. スポット詳細・営業時間・料金
+================================================== */
+
+/* 情報1件分 */
+.spot-detail-data-item {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(143, 120, 99, 0.18);
+}
+
+/* 最後の項目は区切り線なし */
+.spot-detail-data-item:last-child {
+    border-bottom: none;
+}
+
+/* 項目名と値 */
+.spot-detail-data-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+}
+
+/* 項目名 */
+.spot-detail-data-label {
+    color: #796A5C;
+    font-size: 12px;
+}
+
+/* 時刻・料金 */
+.spot-detail-data-value {
+    color: #65754A;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* 最終受付時間 */
+.spot-detail-admission {
+    margin-top: 4px;
+
+    color: #873446;
+    font-size: 11px;
+    text-align: right;
+}
+
+
+/* ==================================================
+   28. スポット詳細・見どころ
+================================================== */
+
+.spot-highlight-item {
+    margin-bottom: 18px;
+}
+
+.spot-highlight-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 見どころ写真 */
+.spot-highlight-photo {
+    padding: 4px 4px 12px;
+
+    background: #FFFCF6;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.spot-highlight-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* 見どころタイトル */
+.spot-highlight-title {
+    margin-top: 8px;
+
+    font-family: "Shippori", serif;
+    color: #873446;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* 見どころの説明 */
+.spot-highlight-description {
+    margin-top: 4px;
+
+    color: #796A5C;
+    font-size: 12px;
+    line-height: 1.8;
+
+    white-space: pre-line;
+}
+
+
+/* ==================================================
+   29. スポット詳細・メニュー
+================================================== */
+
+/* メニュー一覧 */
+.spot-menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* メニュー1件分 */
+.spot-menu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid rgba(143, 120, 99, 0.18);
+}
+
+.spot-menu-item:last-child {
+    border-bottom: none;
+}
+
+/* メニュー写真 */
+.spot-menu-photo {
+    flex-shrink: 0;
+
+    width: 88px;
+    padding: 3px 3px 9px;
+
+    background: #FFFCF6;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.spot-menu-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* メニュー情報 */
+.spot-menu-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* メニュー名 */
+.spot-menu-name {
+    font-family: "Shippori", serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: #873446;
+}
+
+/* 価格 */
+.spot-menu-price {
+    margin-top: 4px;
+
+    color: #65754A;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* メニュー説明 */
+.spot-menu-description {
+    margin-top: 5px;
+
+    color: #8F7863;
+    font-size: 12px;
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+
+/* ==================================================
+   30. スポット詳細・フォトギャラリー
+================================================== */
+
+.spot-detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.spot-detail-gallery-photo {
+    min-width: 0;
+    padding: 4px 4px 12px;
+
+    background: #FFFCF6;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.spot-detail-gallery-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   31. スポット詳細・アクセス・メモ
+================================================== */
+
+/* アクセス情報 */
+.spot-detail-access-item {
+    padding: 8px 0;
+}
+
+/* 項目名 */
+.spot-detail-access-label {
+    margin-bottom: 3px;
+
+    color: #A38A74;
+    font-size: 11px;
+}
+
+/* 項目内容 */
+.spot-detail-access-value {
+    color: #4C5C4E;
+    font-size: 13px;
+    line-height: 1.8;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* 補足メモ */
+.spot-detail-note {
+    padding: 12px;
+
+    border-left: 2px solid #8B3445;
+    background: #F0DFDB;
+
+    color: #873446;
+    font-size: 12px;
+    line-height: 1.8;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   32. 時刻表・基本情報
+================================================== */
+
+.timetable-detail {
+    min-width: 0;
+}
+
+/* 路線・経路情報 */
+.timetable-heading {
+    margin-bottom: 18px;
+}
+
+/* 路線名 */
+.timetable-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #65754A;
+    font-size: 12px;
+}
+
+/* 出発地・到着地 */
+.timetable-route {
+    margin-top: 6px;
+
+    font-family: "Shippori", serif;
+    color: #873446;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* 方面・乗り場 */
+.timetable-direction {
+    margin-top: 4px;
+
+    color: #8F7863;
+    font-size: 12px;
+}
+
+/* 対象日 */
+.timetable-date {
+    margin-top: 6px;
+
+    color: #A38A74;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   33. 時刻表・テーブル
+================================================== */
+
+/* テーブル表示領域 */
+.timetable-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* 時刻表本体 */
+.timetable-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* テーブル見出し */
+.timetable-table th {
+    padding: 9px 6px;
+
+    background: #EDE7D5;
+
+    color: #65754A;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* テーブルセル */
+.timetable-table td {
+    padding: 12px 6px;
+
+    border-bottom: 1px solid #E0D7C6;
+    vertical-align: middle;
+}
+
+/* 出発・到着時刻 */
+.timetable-departure,
+.timetable-arrival {
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* 種別・方面 */
+.timetable-service {
+    color: #65754A;
+    font-size: 11px;
+}
+
+/* 便の補足情報 */
+.timetable-row-note {
+    margin-top: 3px;
+
+    color: #8F7863;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* 状態表示列 */
+.timetable-status {
+    width: 1%;
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   34. 時刻表・便の表示状態
+================================================== */
+
+/* 予定便 */
+.timetable-row.is-planned {
+    background: #EEE3D1;
+    color: #873446;
+}
+
+/* 次発便 */
+.timetable-row.is-next {
+    background: #E2E5D5;
+    color: #4C5C4E;
+}
+
+/* 予定便と次発便が一致する場合 */
+.timetable-row.is-planned.is-next {
+    background: #EEE3D1;
+    color: #873446;
+}
+
+/* 出発済みの便 */
+.timetable-row.is-past {
+    background: transparent;
+    color: #A9A297;
+}
+
+/* 出発済みの便の種別・補足情報 */
+.timetable-row.is-past .timetable-service,
+.timetable-row.is-past .timetable-row-note {
+    color: #A9A297;
+}
+
+/* 便の状態タグ */
+.timetable-tag {
+    display: block;
+
+    margin: 2px 0;
+    padding: 3px 5px;
+
+    border-radius: 3px;
+
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* 予定便タグ */
+.tag-planned {
+    background: #8B3445;
+    color: #FFF4EC;
+}
+
+/* 次発便タグ */
+.tag-next {
+    background: #65754A;
+    color: #FFF4EC;
+}
+
+/* 出発済みの予定便タグ */
+.timetable-row.is-past .tag-planned {
+    background: #D5CEC4;
+    color: #8F887E;
+}
+
+/* 時刻表がない場合 */
+.timetable-empty {
+    padding: 20px 8px;
+
+    color: #8F7863;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* ==================================================
+   35. 時刻表・外部リンク・補足情報
+================================================== */
+
+.timetable-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+/* 関連サイトボタン */
+.timetable-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #A6A68B;
+    border-radius: 4px;
+
+    color: #65754A;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.timetable-link:active {
+    background: #E2E5D5;
+    color: #4C5C4E;
+}
+
+/* 補足情報 */
+.timetable-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+
+    margin-top: 14px;
+
+    color: #8F7863;
+    font-size: 11px;
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+
+/* ==================================================
+   36. 小さいスマートフォンへの対応
+================================================== */
+
+@media (max-width: 375px) {
+
+    .schedule-page {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .schedule-item {
+        grid-template-columns: 44px 20px minmax(0, 1fr);
+    }
+
+    .schedule-card {
+        margin-left: 16px;
+        padding-left: 22px;
+        padding-right: 10px;
+    }
+
+    .is-transport .schedule-card {
+        margin-left: 20px;
+        padding-left: 18px;
+    }
+
+    .schedule-title {
+        font-size: 16px;
+    }
+
+    .schedule-photo {
+        width: 52px;
+    }
+
+    .schedule-spot-tag {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .schedule-route-item {
+        grid-template-columns: 22px minmax(0, 1fr);
+        column-gap: 7px;
+    }
+
+    .schedule-route-icon {
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+
+    .schedule-route-time {
+        font-size: 14px;
+    }
+
+    .schedule-route-title {
+        font-size: 13px;
+    }
+
+    .spot-menu-photo {
+        width: 72px;
+    }
+
+    .timetable-table td {
+        padding: 10px 4px;
+    }
+
+    .timetable-departure,
+    .timetable-arrival {
+        font-size: 13px;
+    }
+}
+
+
+/* ==================================================
+   37. PC・タブレットへの対応
+================================================== */
+
+@media (min-width: 768px) {
+
+    .schedule-page {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 32px 24px;
+    }
+
+    .schedule-photo {
+        width: 90px;
+    }
+
+    .schedule-card {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .spot-detail-photo {
+        max-width: 480px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+/* 38. 写真の代替表示・カード内の余白 */
+.schedule-photo-placeholder { display: none; }
+.schedule-photo.is-placeholder img { display: none; }
+.schedule-photo.is-placeholder .schedule-photo-placeholder {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 3px; aspect-ratio: 1;
+    background: #E2E5D5; color: #65754A;
+}
+.schedule-photo-placeholder i { font-size: 20px; }
+.schedule-photo-placeholder span { font-size: 8px; letter-spacing: 1px; }
+.schedule-spot-tag i { flex-shrink: 0; width: 13px; text-align: center; }
+.schedule-card-header:focus:not(:focus-visible) { outline: none; }
+.is-transport .schedule-title-row { flex-direction: row; align-items: center; }
+.schedule-route-tag { background: transparent; padding: 0; }
+.schedule-card-body { margin-top: 12px; padding-top: 8px; }
+.schedule-spot-item { align-items: flex-start; }
+.schedule-spot-detail-btn { align-self: center; }
+@media (max-width: 375px) {
+    .schedule-card-header { gap: 6px; }
+    .schedule-photo { width: 46px; }
+    .schedule-title { overflow-wrap: anywhere; }
+}
+
+/* 39. モーダルの表示領域（Bootstrap 5） */
+.modal { --bs-modal-margin: 12px; }
+.modal .modal-dialog {
+    width: calc(100% - 24px);
+    max-width: 560px;
+    margin: 12px auto;
+}
+.modal .modal-dialog-centered { min-height: calc(100% - 24px); }
+.modal .modal-dialog-scrollable { height: calc(100% - 24px); }
+.modal .modal-content { max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); min-width: 0; overflow: hidden; }
+.modal .modal-header, .modal .modal-footer { flex-shrink: 0; }
+.modal .modal-body { min-height: 0; min-width: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
+.modal .modal-body img { max-width: 100%; }
+@media (min-width: 768px) {
+    .modal .modal-dialog { max-width: 560px; margin: 24px auto; }
+    .modal .modal-dialog-centered { min-height: calc(100% - 48px); }
+    .modal .modal-dialog-scrollable { height: calc(100% - 48px); }
+    .modal .modal-content { max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); }
+}
+
+/* 40. 電車移動・駅を軸にした経路表示 */
+.rail-journey { min-width: 0; width: 100%; color: #493f36; font-size: 13px; }
+.rail-station {
+    display: grid; grid-template-columns: 65px minmax(0, 1fr);
+    align-items: center; gap: 8px; padding: 9px 10px;
+    background: #e9e3d7; border-radius: 4px;
+}
+.rail-station-times { font-variant-numeric: tabular-nums; line-height: 1.45; white-space: nowrap; }
+.rail-station-times strong { font-size: 16px; font-weight: 700; }
+.rail-station-times small { margin-left: 3px; font-size: 10px; color: #796a5c; }
+.rail-station-name { font-size: 15px; font-weight: 700; color: #65754a; overflow-wrap: anywhere; }
+.rail-transfer { font-size: 11px; color: #796a5c; font-weight: 400; margin-top: 2px; }
+.rail-leg {
+    margin: 0 0 0 21px; padding: 10px 8px 12px 13px; min-width: 0;
+    border-left: 5px solid #873446; overflow-wrap: anywhere;
+}
+.rail-leg.rail-other { border-left-color: #a6a68b; }
+.rail-line-name { display: flex; align-items: flex-start; gap: 6px; font-weight: 700; color: #873446; font-size: 14px; }
+.rail-line-name i { flex-shrink: 0; }
+.rail-direction { margin-top: 4px; font-size: 13px; }
+.rail-meta { margin-top: 7px; color: #64584d; font-size: 12px; line-height: 1.6; }
+.rail-stats { display: flex; flex-wrap: wrap; gap: 5px 10px; margin-top: 8px; color: #65754a; font-size: 12px; font-weight: 600; }
+.rail-note { margin-top: 6px; font-size: 11px; color: #796a5c; white-space: pre-line; }
+.rail-leg .schedule-route-actions { flex-wrap: wrap; }
+@media (max-width: 390px) {
+    .rail-station { grid-template-columns: 57px minmax(0, 1fr); padding: 8px 7px; gap: 6px; }
+    .rail-station-times strong { font-size: 15px; }
+    .rail-station-name { font-size: 14px; }
+    .rail-leg { margin-left: 16px; padding-left: 9px; }
+}
