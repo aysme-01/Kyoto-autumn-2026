@@ -307,3 +307,47 @@ body, button, input, select, textarea, .modal { font-family: var(--kyoto-font); 
 #spot-detail-modal .spot-fact-row dt { display:flex; align-items:baseline; gap:5px; min-width:0; color:#8B3445; font-size:12px; }
 #spot-detail-modal .spot-fact-row dd { margin:0; min-width:0; color:#493e36; font-size:12px; }
 #spot-detail-modal .spot-fact-row dd small { display:block; margin-top:2px; }
+
+/* Final alignment polish: keep the existing layout and palette. */
+.editorial-note, #spot-detail-modal .spot-detail-note, #schedule-detail-modal .schedule-note {
+  display:flex; align-items:flex-start; white-space:normal;
+}
+.editorial-note > i, .home-now-note > i {
+  flex:0 0 1em; align-self:flex-start; margin:0; line-height:inherit;
+}
+.editorial-note > i::before, .home-now-note > i::before { vertical-align:middle; }
+.editorial-note > span, .editorial-note > div, .home-now-note > span {
+  min-width:0; flex:1 1 0; white-space:pre-line;
+}
+#spot-detail-modal .spot-highlight-item { padding:3px 0 3px 13px; margin-bottom:5px; }
+#spot-detail-modal .spot-highlight-item:last-child { margin-bottom:0; }
+#spot-detail-modal .spot-highlight-item::before { content:none; }
+#spot-detail-modal .spot-highlight-title { position:relative; margin:0; line-height:1.65; }
+#spot-detail-modal .spot-highlight-title::before {
+  content:''; position:absolute; left:-12px; top:.825em; transform:translateY(-50%);
+  width:5px; height:5px; background:var(--kyoto-wine); border-radius:50%;
+}
+#spot-detail-modal .spot-highlight-photo { float:none; margin:0 0 6px; }
+#spot-detail-modal .spot-detail-photo::after { content:none; display:none; }
+#spot-detail-modal .spot-detail-photo::before {
+  top:-7px; left:50%; width:28%; height:15px;
+  transform:translateX(-50%) rotate(-5deg); pointer-events:none;
+}
+.home-now-photo::before, .schedule-photo::before { left:50%; transform:translateX(-50%) rotate(-8deg); }
+.spots-card::after { left:50%; transform:translateX(-50%) rotate(-7deg); }
+.spots-card:nth-child(even)::after { transform:translateX(-50%) rotate(6deg); }
+
+
+/* Travel memo: compact, tappable shop recommendations. */
+#home-notes .home-memo-shops { margin-top: 8px; }
+#home-notes .home-memo-shop {
+  display:flex; align-items:center; gap:10px; width:100%; text-align:left;
+  border:0; border-top:1px solid #d9cbb7; background:transparent;
+  padding:10px 0; color:var(--kyoto-wine,#873446); font:inherit;
+}
+#home-notes .home-memo-shop:last-child { padding-bottom:2px; }
+#home-notes .home-memo-shop-text { flex:1; min-width:0; display:grid; gap:3px; }
+#home-notes .home-memo-shop-text strong { font-size:14px; font-weight:700; line-height:1.5; }
+#home-notes .home-memo-shop-text > span { color:#75615c; font-size:12px; line-height:1.65; }
+#home-notes .home-memo-shop > i { flex:none; font-size:12px; }
+#home-notes .home-memo-shop:focus-visible { outline:2px solid #873446; outline-offset:2px; }

@@ -921,9 +921,7 @@ function renderScheduleNote(schedule) {
         <div class="schedule-note editorial-note">
 
             <i class="bi bi-info-circle" aria-hidden="true"></i>
-            <div class="schedule-note-text">
-                ${escapeHtml(schedule.note)}
-            </div>
+            <div class="schedule-note-text">${escapeHtml(schedule.note)}</div>
 
         </div>
     `;

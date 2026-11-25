@@ -212,7 +212,7 @@
       "spotIds": [],
       "description": "商店街・お土産探し・食べ歩き",
       "showInProgress": true,
-      "note": "早く終われば前の電車へ。お土産店はスポットの候補から。",
+      "note": "早く終われば前の電車へ。おすすめのお店は旅のメモを参照。",
       "image": "assets/spots/togetsukyo.jpg"
     },
     {
@@ -239,7 +239,7 @@
       "spotIds": [],
       "description": "嵐電・地下鉄東西線で永観堂方面へ",
       "showInProgress": false,
-      "note": "乗換6分。間に合わなければ次便。時刻は会話で決めた予定表・当日確認。"
+      "note": "乗換時間は6分。間に合わなければ次便へ。運行状況は当日確認。"
     },
     {
       "id": "to-eikando",
@@ -324,7 +324,7 @@
       ],
       "description": "街並み・お土産探し・甘味休憩",
       "showInProgress": true,
-      "note": "休憩候補はスポット一覧から。17時に切り上げ。"
+      "note": "甘味・お土産の候補は旅のメモを参照。17時に切り上げ。"
     },
     {
       "id": "to-kiyomizu",
@@ -1598,7 +1598,7 @@
         }
       ],
       "menus": [],
-      "note": "立ち寄り候補。営業時間・営業状況は現地確認。"
+      "note": "庭園を眺めながら休憩できるカフェ。混雑時は持ち帰りの抹茶パフェアイスバーも候補。"
     },
     {
       "id": "fujinami",
@@ -2025,6 +2025,336 @@
       ],
       "menus": [],
       "note": "今回は清水寺のライトアップを優先。"
+    },
+    {
+      "id": "kimono-forest",
+      "name": "キモノフォレスト",
+      "reading": null,
+      "type": "sightseeing",
+      "area": "嵐山",
+      "description": "京友禅を使ったポールが並ぶ嵐電嵐山駅の散策スポット。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": "嵐電嵐山駅構内",
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%82%AD%E3%83%A2%E3%83%8E%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88+%E5%B5%90%E9%9B%BB%E5%B5%90%E5%B1%B1%E9%A7%85+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "京友禅のポール",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "駅構内で短時間の散策",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "無料で見られるエリアを約10分で散策する候補。"
+    },
+    {
+      "id": "arashiyama-footbath",
+      "name": "嵐電嵐山駅の足湯",
+      "reading": null,
+      "type": "sightseeing",
+      "area": "嵐山",
+      "description": "駅構内で歩き疲れた足を休める寄り道候補。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": "嵐電嵐山駅構内",
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E9%9B%BB%E5%B5%90%E5%B1%B1%E9%A7%85+%E8%B6%B3%E6%B9%AF+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "足湯で休憩",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "約15分の休憩候補。料金は250円程度との情報あり（未確認）。受付・営業状況は現地確認。"
+    },
+    {
+      "id": "nakanoshima",
+      "name": "嵐山公園 中之島地区",
+      "reading": null,
+      "type": "nature",
+      "area": "嵐山",
+      "description": "渡月橋の南側に広がる桂川沿いの公園。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E5%85%AC%E5%9C%92+%E4%B8%AD%E4%B9%8B%E5%B3%B6%E5%9C%B0%E5%8C%BA+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "桂川の河原",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "渡月橋と山並み",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "駅への移動時間を優先。時間が足りなければ省略。"
+    },
+    {
+      "id": "shoryuen",
+      "name": "嵐山昇龍苑",
+      "reading": null,
+      "type": "shop",
+      "area": "嵐山",
+      "description": "京菓子や京漬物、和雑貨などをまとめて見られる買い物候補。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": "嵐電嵐山駅周辺",
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B5%90%E5%B1%B1%E6%98%87%E9%BE%8D%E8%8B%91+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "京都のお土産",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "西利など",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "電車前に短時間で買い物。営業状況は現地確認。"
+    },
+    {
+      "id": "tenjuan",
+      "name": "天授庵",
+      "reading": null,
+      "type": "temple",
+      "area": "東山",
+      "description": "南禅寺の塔頭。紅葉と庭園を楽しむ寄り道候補。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": "南禅寺境内",
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E7%A6%85%E5%AF%BA+%E5%A4%A9%E6%8E%88%E5%BA%B5+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "庭園と紅葉",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "約30分の候補。拝観料500円との情報あり（未確認）。南禅寺の有料拝観などと入れ替え、15時頃の出発目標を優先。"
+    },
+    {
+      "id": "ishibe-koji",
+      "name": "石塀小路",
+      "reading": null,
+      "type": "sightseeing",
+      "area": "東山",
+      "description": "ねねの道から入る石畳の路地。町並みを楽しむ短い寄り道。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%9F%B3%E5%A1%80%E5%B0%8F%E8%B7%AF+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "石畳の路地",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "約5分の散策候補。私道や撮影禁止の表示に従う。"
+    },
+    {
+      "id": "yasaka-pagoda-view",
+      "name": "八坂の塔が見える坂",
+      "reading": null,
+      "type": "sightseeing",
+      "area": "東山",
+      "description": "八坂通から法観寺の五重塔を望む定番の町並み。",
+      "image": null,
+      "images": [],
+      "businessHours": [],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": null,
+      "phone": null,
+      "access": null,
+      "officialUrl": null,
+      "tabelogUrl": null,
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%9D%82%E3%81%AE%E5%A1%94+%E5%85%AB%E5%9D%82%E9%80%9A+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "坂道と五重塔",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "通り道で短時間の写真撮影。通行の妨げにならないように。"
+    },
+    {
+      "id": "umezono",
+      "name": "梅園 清水店",
+      "reading": null,
+      "type": "cafe",
+      "area": "東山",
+      "description": "みたらし団子などの甘味を楽しめる老舗。",
+      "image": null,
+      "images": [],
+      "businessHours": [
+        {
+          "label": "営業",
+          "openTime": "11:00",
+          "closeTime": "18:30",
+          "lastAdmissionTime": "18:00",
+          "note": null
+        }
+      ],
+      "closedDays": null,
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区清水産寧坂339-1",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://umezono-kyoto.com/kiyomizu/",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26001861/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%A2%85%E5%9C%92+%E6%B8%85%E6%B0%B4%E5%BA%97+%E4%BA%AC%E9%83%BD",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "みたらし団子",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "わらび餅",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "抹茶",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "かさぎ屋が混雑している場合の代替候補。営業時間・受付は現地確認。"
+    },
+    {
+      "id": "bunnosuke",
+      "name": "文の助茶屋 京都本店",
+      "reading": null,
+      "type": "cafe",
+      "area": "東山",
+      "description": "八坂の塔の東側にある老舗の甘味処。わらび餅や甘酒を楽しみながら休憩できる。",
+      "image": null,
+      "images": [],
+      "businessHours": [
+        {
+          "label": "営業",
+          "openTime": "11:00",
+          "closeTime": "17:00",
+          "lastAdmissionTime": null,
+          "note": "京都観光Navi掲載。営業状況は当日確認。"
+        }
+      ],
+      "closedDays": "不定休",
+      "fees": [],
+      "durationMinutes": null,
+      "address": "京都市東山区下河原通東入八坂上町373",
+      "phone": null,
+      "access": null,
+      "officialUrl": "https://ecstore.bunnosuke.jp/about",
+      "tabelogUrl": "https://tabelog.com/kyoto/A2601/A260301/26004769/",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%87%E3%81%AE%E5%8A%A9%E8%8C%B6%E5%B1%8B+%E4%BA%AC%E9%83%BD%E6%9C%AC%E5%BA%97+%E5%85%AB%E5%9D%82%E4%B8%8A%E7%94%BA373",
+      "latitude": null,
+      "longitude": null,
+      "highlights": [
+        {
+          "title": "わらび餅",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "甘酒",
+          "description": null,
+          "image": null
+        },
+        {
+          "title": "ぜんざい",
+          "description": null,
+          "image": null
+        }
+      ],
+      "menus": [],
+      "note": "座って休憩する候補。17時閉店のため早めに。"
     }
   ],
   "routes": [
@@ -2508,7 +2838,7 @@
           "url": "https://www.hankyu.co.jp/station/html/HK-86_ky_1_w.html"
         }
       ],
-      "note": "到着時刻は会話内の予定表。運行状況を当日確認。",
+      "note": "到着時刻は目安。運行状況は当日確認。",
       "serviceType": "準特急"
     }
   ],
@@ -2543,9 +2873,225 @@
       "content": "予約は10:30と19:30。永観堂を優先、南禅寺は時間に応じて調整。電車は通常ダイヤの予定・当日確認。"
     },
     {
+      "id": "note-015",
+      "title": "疲れたら｜タクシーで移動",
+      "content": "午後は疲れ具合に応じてタクシーを利用。3区間を利用すれば徒歩を約4〜5km減らせる見込み（概算）。紅葉シーズンの渋滞・配車待ちに注意し、19:30の夕食予約を優先。",
+      "items": [
+        {
+          "spotId": "eikando",
+          "label": "蹴上駅 → 永観堂（徒歩予定23分）",
+          "description": "12:37〜13:00。単純な移動区間なので、疲れていたらタクシーに変更。駅付近で乗車できるか当日確認。"
+        },
+        {
+          "spotId": "kodaiji",
+          "label": "南禅寺 → 高台寺付近（徒歩予定40分）",
+          "description": "15:00〜15:40。青蓮院・知恩院・円山公園経由の徒歩を省略し、ねねの道から散策を再開。"
+        },
+        {
+          "spotId": "iroha",
+          "label": "清水寺 → いろはかるた（徒歩予定50分）｜最優先",
+          "description": "18:40〜19:30。清水坂観光駐車場付近など、乗車可能な場所まで歩いてタクシーへ。夜は疲れも出るので無理せず利用。乗車場所・所要時間は当日確認。"
+        }
+      ]
+    },
+    {
       "id": "note-020",
       "title": "帰宅目標",
       "content": "21時前後に京都を出発、22:30頃帰宅目標。"
+    },
+    {
+      "id": "note-030",
+      "title": "嵐山｜昼の寄り道",
+      "content": "11:30〜11:55の自由散策。12:03の電車に間に合うよう、嵐電嵐山駅周辺で完結する候補を優先。全部回る必要なし。",
+      "items": [
+        {
+          "spotId": "kimono-forest",
+          "label": "キモノフォレスト｜おすすめ",
+          "description": "駅構内の京友禅のポール。無料・約10分の散策。"
+        },
+        {
+          "spotId": "arashiyama-footbath",
+          "label": "嵐電嵐山駅の足湯",
+          "description": "約15分の休憩候補。料金250円程度との情報あり（要確認）。"
+        },
+        {
+          "spotId": "nakanoshima",
+          "label": "中之島公園の河原",
+          "description": "橋のたもとをぶらっと。駅への時間に余裕がある場合のみ。"
+        },
+        {
+          "spotId": "shoryuen",
+          "label": "嵐山昇龍苑",
+          "description": "駅周辺で京土産をまとめて購入。"
+        }
+      ]
+    },
+    {
+      "id": "note-040",
+      "title": "嵐山｜甘味・食べ歩き",
+      "content": "松ヶ枝の昼食後なので、座る店より持ち帰りを優先。混んでいたら無理に並ばない。",
+      "items": [
+        {
+          "spotId": "kyo-baum",
+          "label": "京ばあむ",
+          "description": "抹茶のおやつや京ばあむソフト。空いていれば。"
+        },
+        {
+          "spotId": "malebranche",
+          "label": "マールブランシュ",
+          "description": "茶の菓や茶茶棒。買い物中心で、行列なら省略。"
+        }
+      ]
+    },
+    {
+      "id": "note-050",
+      "title": "嵐山｜お土産",
+      "content": "昇龍苑や駅周辺で短時間に。気になるものだけ選ぶ。",
+      "items": [
+        {
+          "spotId": "malebranche",
+          "label": "マールブランシュ",
+          "description": "お濃茶ラングドシャ「茶の菓」。職場などへのお土産に。"
+        },
+        {
+          "spotId": "kyo-baum",
+          "label": "京ばあむ",
+          "description": "抹茶と豆乳のバームクーヘン。"
+        },
+        {
+          "spotId": "nishiri",
+          "label": "京つけもの西利",
+          "description": "千枚漬などの京漬物。甘くないお土産に。"
+        },
+        {
+          "spotId": "ochanoko",
+          "label": "おちゃのこさいさい",
+          "description": "京七味・ふりかけ。辛いもの好きに。"
+        },
+        {
+          "spotId": "otabe",
+          "label": "おたべ",
+          "description": "生八ッ橋や季節の詰め合わせ。"
+        },
+        {
+          "spotId": "marun",
+          "label": "嵐山まるん",
+          "description": "金平糖・京飴。小さなギフトに。"
+        }
+      ]
+    },
+    {
+      "id": "note-055",
+      "title": "南禅寺｜余裕があれば",
+      "content": "14:20〜15:00の南禅寺散策の中で検討。永観堂と清水寺の予定を優先し、無理に追加しない。",
+      "items": [
+        {
+          "spotId": "tenjuan",
+          "label": "天授庵｜紅葉の寄り道候補",
+          "description": "庭園の紅葉。約30分、拝観料500円との情報あり（要確認）。方丈庭園などと入れ替えて検討。"
+        }
+      ]
+    },
+    {
+      "id": "note-060",
+      "title": "ねねの道・二寧坂｜甘味休憩",
+      "content": "15:40〜17:00の自由散策。まず30分ほど座って休憩するのがおすすめ。かさぎ屋・文の助茶屋は早めに。行列なら伊藤久右衛門や梅園へ。混雑時は無理に並ばない。",
+      "items": [
+        {
+          "spotId": "kasagi",
+          "label": "かさぎ屋｜第一候補",
+          "description": "三色おはぎ・粟ぜんざい。小さな老舗なので空いていれば優先。16時頃までに立ち寄りたい。"
+        },
+        {
+          "spotId": "bunnosuke",
+          "label": "文の助茶屋 京都本店｜老舗で休憩",
+          "description": "八坂の塔の近く。わらび餅・甘酒・ぜんざい。11:00〜17:00。早めに。"
+        },
+        {
+          "spotId": "ito",
+          "label": "伊藤久右衛門 清水産寧坂店｜ゆっくり休憩",
+          "description": "庭園を眺めながら抹茶パフェ。10:00〜18:00（カフェLO17:30）。混んでいればアイスバーも。"
+        },
+        {
+          "spotId": "umezono",
+          "label": "梅園 清水店｜混雑時の候補",
+          "description": "みたらし団子・わらび餅・抹茶。11:00〜18:30（LO18:00）。"
+        },
+        {
+          "spotId": "fujinami",
+          "label": "藤菜美",
+          "description": "団子やわらび餅の食べ歩き候補。ほかの甘味と重複するなら省略。"
+        }
+      ]
+    },
+    {
+      "id": "note-070",
+      "title": "東山｜お土産",
+      "content": "甘味のあと、閉店前にお土産を。七味家本舗と松栄堂を優先し、その他は余裕があれば。",
+      "items": [
+        {
+          "spotId": "shichimi",
+          "label": "七味家本舗｜おすすめ",
+          "description": "京七味・山椒。"
+        },
+        {
+          "spotId": "shoyeido",
+          "label": "松栄堂｜おすすめ",
+          "description": "お香・香りの小物。"
+        },
+        {
+          "spotId": "ousu",
+          "label": "おうすの里",
+          "description": "梅干し・梅製品。"
+        },
+        {
+          "spotId": "sannei-marun",
+          "label": "産寧坂まるん",
+          "description": "金平糖・京飴やかわいい京菓子。"
+        },
+        {
+          "spotId": "ito",
+          "label": "伊藤久右衛門",
+          "description": "抹茶菓子・宇治茶。"
+        },
+        {
+          "spotId": "seiryuen",
+          "label": "青龍苑",
+          "description": "甘味や京土産をまとめて探したいときに。"
+        }
+      ]
+    },
+    {
+      "id": "note-075",
+      "title": "東山｜町並み・写真",
+      "content": "お店が閉まり始めたら町並み散策へ。清水寺へ向かう途中で、時間に余裕があれば寄り道。",
+      "items": [
+        {
+          "spotId": "ishibe-koji",
+          "label": "石塀小路",
+          "description": "ねねの道から少し入った石畳の路地。約5分の寄り道。撮影禁止の表示に注意。"
+        },
+        {
+          "spotId": "yasaka-pagoda-view",
+          "label": "八坂の塔が見える坂",
+          "description": "八坂通から五重塔を望む定番の景色。"
+        },
+        {
+          "spotId": "ninenzaka",
+          "label": "二寧坂",
+          "description": "町家と石畳を楽しみながら散策。"
+        },
+        {
+          "spotId": "sannenzaka",
+          "label": "産寧坂",
+          "description": "清水寺方面へ続く坂道。"
+        }
+      ]
+    },
+    {
+      "id": "note-080",
+      "title": "散策の目安",
+      "content": "嵐山は駅周辺、東山は甘味→お土産→町並みの順が目安。東山の店は夕方に閉まる場合があるため、営業時間・料金・在庫・混雑は当日確認。予約と電車の時刻を優先。"
     }
   ]
 }

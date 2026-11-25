@@ -158,76 +158,38 @@ function renderHome() {
 
     function renderCurrentPhoto(schedule) {
 
-        const spots = schedule
-            ? getSpotsBySchedule(schedule.id)
-            : [];
-
-        const spot = spots.find(s => s.image) ?? spots[0];
-
-        const imagePath = schedule?.image ?? spot?.image ?? "";
-
-        const photoKey = JSON.stringify([
-            schedule?.id,
-            spot?.id,
-            imagePath
-        ]);
-
-        if (photoKey === previousPhotoKey) {
-            return;
-        }
-
+        const candidates = getHomePhotoCandidates(schedule);
+        const photoKey = JSON.stringify([schedule?.id, candidates]);
+        if (photoKey === previousPhotoKey) return;
         previousPhotoKey = photoKey;
-
         const requestId = ++photoRequestId;
 
-        $placeholder.find("i")
-            .attr("class", getHomePhotoIcon(schedule?.type));
-
-        $image.prop("hidden", true);
+        $placeholder.find("i").attr("class", getHomePhotoIcon(schedule?.type));
+        $image.prop("hidden", true).removeAttr("src");
         $placeholder.prop("hidden", false);
 
-        $photo
-            .prop("disabled", !spot)
-            .attr("aria-label",
-                spot ? `${spot.name}の詳細` : "予定のイメージ");
-
-        if (spot) {
-            $photo.attr("data-spot-id", spot.id);
-        } else {
-            $photo.removeAttr("data-spot-id");
+        function setPhotoTarget(spot) {
+            $photo.prop("disabled", !spot)
+                .attr("aria-label", spot ? `${spot.name}の詳細` : "予定のイメージ");
+            if (spot) $photo.attr("data-spot-id", spot.id);
+            else $photo.removeAttr("data-spot-id");
         }
+        setPhotoTarget(candidates[0]?.spot);
 
-        if (!imagePath) return;
-
-        // 表示前に画像を読み込む
-        const loader = new Image();
-
-        loader.onload = function () {
-
-            // 別の予定に切り替わっていた場合は無視
-            if (disposed || requestId !== photoRequestId) {
-                return;
-            }
-
-            $image
-                .attr("src", imagePath)
-                .attr("alt", spot?.name ?? schedule?.title ?? "予定の写真")
-                .prop("hidden", false);
-
-            $placeholder.prop("hidden", true);
-        };
-
-        loader.onerror = function () {
-
-            if (disposed || requestId !== photoRequestId) {
-                return;
-            }
-
-            $image.prop("hidden", true);
-            $placeholder.prop("hidden", false);
-        };
-
-        loader.src = imagePath;
+        function tryPhoto(index) {
+            if (disposed || requestId !== photoRequestId || index >= candidates.length) return;
+            const { path, spot, label } = candidates[index];
+            const loader = new Image();
+            loader.onload = function () {
+                if (disposed || requestId !== photoRequestId) return;
+                setPhotoTarget(spot);
+                $image.attr("src", path).attr("alt", label).prop("hidden", false);
+                $placeholder.prop("hidden", true);
+            };
+            loader.onerror = () => tryPhoto(index + 1);
+            loader.src = path;
+        }
+        tryPhoto(0);
     }
 
 
@@ -445,12 +407,21 @@ function renderHome() {
         <article>
             <h3>${escapeHtml(note.title)}</h3>
             <p>${escapeHtml(note.content)}</p>
+            ${note.items?.length ? `<div class="home-memo-shops">${note.items.map(item => `
+                <button type="button" class="home-memo-shop" data-home-memo-spot="${escapeHtml(item.spotId)}">
+                    <span class="home-memo-shop-text"><strong>${escapeHtml(item.label)}</strong><span>${escapeHtml(item.description)}</span></span>
+                    <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                </button>`).join("")}</div>` : ""}
         </article>
 
     `).join("");
 
     $page.find("#home-notes")
         .html(notesHtml || "<p>メモはまだありません。</p>");
+
+    $page.on("click.home", "[data-home-memo-spot]", function () {
+        openSpotDetail($(this).attr("data-home-memo-spot"));
+    });
 
     $page.on("click.home", "[data-home-notes]", function () {
 
@@ -496,6 +467,41 @@ function renderHome() {
         $photo.off(".home");
         $page.off(".home");
     };
+}
+
+
+// Use the actual destination (or its nearby sightseeing spot) for transport cards.
+function getHomePhotoCandidates(schedule) {
+    if (!schedule) return [];
+    const result = [];
+    const add = (path, spot, label) => {
+        if (path && !result.some(item => item.path === path)) {
+            result.push({path, spot, label: label || spot?.name || schedule.title});
+        }
+    };
+    const ownSpots = getSpotsBySchedule(schedule.id);
+    add(schedule.image, ownSpots[0], schedule.title);
+    ownSpots.forEach(spot => add(spot.image, spot));
+    if (schedule.type === "transport") {
+        const destinations = {
+            "to-arashiyama": "togetsukyo", "to-bridge": "togetsukyo",
+            "to-tenryu": "tenryuji", "to-jojakko": "jojakkoji",
+            "to-lunch": "matsugae", "to-randen": "square",
+            "to-keage": "nejiri", "to-eikando": "eikando",
+            "to-nanzen": "nanzenji", "to-higashiyama": "ninenzaka",
+            "to-kiyomizu": "kiyomizu", "to-dinner": "iroha"
+        };
+        const destinationId = destinations[schedule.id];
+        const destination = destinationId ? getSpotById(destinationId) : null;
+        if (destination) add(destination.image, destination);
+        if (schedule.id === "to-osaka") {
+            add("assets/spots/hankyu-umeda.jpg", null, "阪急大阪梅田駅");
+        }
+        if (schedule.id === "to-station") {
+            add("assets/spots/hankyu-kawaramachi.jpg", null, "京都河原町駅");
+        }
+    }
+    return result;
 }
 
 

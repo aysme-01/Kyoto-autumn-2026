@@ -288,9 +288,7 @@ function renderSpotDetailReservations(spot) {
 
                 ${reservation.note
                     ? `
-                        <div class="spot-detail-subtext">
-                            ${escapeHtml(reservation.note)}
-                        </div>
+                        <div class="spot-detail-subtext">${escapeHtml(reservation.note)}</div>
                     `
                     : ""
                 }

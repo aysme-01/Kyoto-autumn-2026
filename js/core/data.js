@@ -10,7 +10,7 @@ async function loadTripData() {
         return tripData;
     }
 
-    tripData = await $.getJSON("./data/trip.json");
+    tripData = await $.getJSON("./data/trip.json?v=20261126-taxi4");
 
     return tripData;
 }
